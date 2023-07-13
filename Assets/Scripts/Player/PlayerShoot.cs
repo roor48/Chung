@@ -1,4 +1,3 @@
-using Manager;
 using UnityEngine;
 
 public class Shoot : MonoBehaviour
@@ -19,10 +18,10 @@ public class Shoot : MonoBehaviour
         switch (curPower)
         {
             case 0:
-                GameObject bullet = GameManager.Instance.poolManager.GetPool("Player_Bullet");
+                GameObject bullet = PoolManager.Instance.GetPool("Player_Bullet");
                 bullet.transform.position = transform.position;
                 break;
         }
-    
+
     }
 }
