@@ -14,8 +14,8 @@ public class Remap : MonoBehaviour
     public Transform target;
 
     public float speed;
-    public bool isCorner;
-    
+    public bool stopReturn;
+
     private Vector3 firstPos;
     private void Awake()
     {
@@ -24,16 +24,20 @@ public class Remap : MonoBehaviour
 
     private void Update()
     {
+        if (stopReturn)
+            return;
         transform.position += Time.deltaTime * speed  * Vector3.left;
         if (transform.position.x <= -32)
         {
-            if (type == Type.Straight)
+            switch (type)
             {
-                transform.position = new Vector3(target.position.x + 20, -1.92f, -1.43f);
-            }
-            else
-            {
-                
+                case Type.Straight:
+                    transform.position = new Vector3(target.position.x + 20, -1.92f, -1.43f);
+                    break;
+                case Type.Corner:
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
             }
         }
     }

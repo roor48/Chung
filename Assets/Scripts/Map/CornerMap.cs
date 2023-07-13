@@ -11,11 +11,17 @@ public class CornerMap : MonoBehaviour
     private bool stopRot = true;
     private void OnEnable()
     {
+        // 위치 초기화
         transform.eulerAngles = Vector3.zero;
         corners[0].transform.localPosition = new Vector3(0,-1.92f,-1.43f);
         corners[1].transform.localPosition = new Vector3(17.33f,-1.92f,-5.58f);
         corners[2].transform.localPosition = new Vector3(28.44f,-1.92f,-16.75f);
         corners[3].transform.localPosition = new Vector3(33.79f,-1.92f,-36.72f);
+        // No "for" for faster
+        corners[0].speed = 0;
+        corners[1].speed = 0;
+        corners[2].speed = 0;
+        corners[3].speed = 0;
         stopRot = true;
     }
 

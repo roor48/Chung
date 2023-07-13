@@ -6,29 +6,25 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float speed;
-    
-    private Transform playerTrans;
-    private Rigidbody rigid;
+    public int dmg;
+
+    public Rigidbody rigid;
+
+    private Camera _camera;
+
     private void Awake()
     {
         rigid = GetComponent<Rigidbody>();
-        playerTrans = GameObject.FindWithTag("Player").transform;
-    }
-
-    private void OnEnable()
-    {
-        transform.position = playerTrans.position;
-        Invoke(nameof(SetInactive), 5f);
+        _camera = Camera.main;
     }
 
     private void FixedUpdate()
     {
         rigid.velocity = Time.fixedDeltaTime * speed * Vector3.right;
-    }
-
-
-    private void SetInactive()
-    {
-        gameObject.SetActive(false);
+        if (_camera.WorldToViewportPoint(transform.position).x > 1.5f ||
+            _camera.WorldToViewportPoint(transform.position).x < -0.5f)
+        {
+            gameObject.SetActive(false);
+        }
     }
 }
