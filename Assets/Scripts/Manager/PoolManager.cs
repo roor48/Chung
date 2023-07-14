@@ -3,9 +3,6 @@ using UnityEngine;
 
 public class PoolManager : MonoBehaviour
 {
-    private static PoolManager _instance;
-    public static PoolManager Instance => _instance ? _instance : null;
-    
     [SerializeField] private Pool[] pools;
 
     private Dictionary<string, List<GameObject>> objDict;
@@ -22,13 +19,6 @@ public class PoolManager : MonoBehaviour
                 objDict[pools[i].name][j].SetActive(false);
             }
         }
-    
-        if (_instance)
-            Destroy(this.gameObject);
-        else
-            _instance = this;
-    
-        DontDestroyOnLoad(this.gameObject);
     }
 
     public GameObject GetPool(string target)
@@ -50,6 +40,20 @@ public class PoolManager : MonoBehaviour
         }
         select.SetActive(true);
         return select;
+    }
+
+    public void DisableEnemy()
+    {
+        for (int i = 0; i < pools.Length; i++)
+        {
+            if (pools[i].obj.CompareTag("Enemy") || pools[i].obj.CompareTag("Bullet"))
+            {
+                for (int j = 0; j < objDict[pools[i].name].Count; j++)
+                {
+                    objDict[pools[i].name][j].SetActive(false);
+                }
+            }
+        }
     }
 }
 

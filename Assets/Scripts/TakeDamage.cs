@@ -1,7 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Net.NetworkInformation;
 using UnityEngine;
 
 public class TakeDamage : MonoBehaviour
@@ -10,6 +6,7 @@ public class TakeDamage : MonoBehaviour
     public int health;
 
     private Animator anim;
+    private bool isDead;
 
     private void Awake()
     {
@@ -19,11 +16,12 @@ public class TakeDamage : MonoBehaviour
     private void OnEnable()
     {
         health = maxHealth;
+        isDead = false;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (CompareTag("Bullet"))
+        if (other.CompareTag("Bullet") && !isDead)
         {
             GetDamage(other.GetComponent<Bullet>().dmg);
             other.gameObject.SetActive(false);
@@ -35,8 +33,11 @@ public class TakeDamage : MonoBehaviour
         health -= dmg;
         if (health <= 0)
         {
+            isDead = true;
+            if (gameObject.CompareTag("Boss"))
+                GameManager.Instance.poolManager.DisableEnemy();
             if (anim == null)
-                SetInActive(); // 애니메이터가 없으면 바로 삭제
+                SetInActive(); // 애니메이터가 없으면 바로 호출
             else
                 anim.SetTrigger(AnimatorID.onDie);
         }
