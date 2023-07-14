@@ -5,45 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e34de0e-f3dd-4c4e-b133-97dea5675b16" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Slime_01.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Slime_01/Bullet_Slime_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Slime_01/Bullet_Slime_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Play 1.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Play 1.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Play.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Play.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Spawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Spawn.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/PoolManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/PoolManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMove.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerShoot.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerShoot.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TakeDamage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TakeDamage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Animation/Slime_Anim.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Animation/Slime_Anim.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Animator/Slime.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Animator/Slime.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Materials/Face/Face 0.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Materials/Face/Face 0.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Materials/Face/Face 3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Materials/Face/Face 3.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Bush_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Bush_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Bush_02.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Bush_02.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Bush_03.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Bush_03.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Flowers_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Flowers_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Flowers_02.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Flowers_02.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Grass_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Grass_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Grass_02.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Grass_02.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Mushroom_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Mushroom_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Mushroom_02.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Mushroom_02.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Stump_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Stump_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Tree_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Tree_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Tree_02.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Tree_02.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Tree_03.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Tree_03.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Tree_04.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Tree_04.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Tree_05.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Tree_05.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resorces/SpawnData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resorces/SpawnData.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +101,7 @@
       <option name="presentableId" value="Default" />
       <updated>1689254593597</updated>
       <workItem from="1689254596176" duration="7626000" />
-      <workItem from="1689331714641" duration="19620000" />
+      <workItem from="1689331714641" duration="21369000" />
     </task>
     <servers />
   </component>

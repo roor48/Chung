@@ -1,0 +1,5 @@
+Normal,1,2
+Normal,2,0
+Normal,3,2
+Normal,4,0
+King,0,3
