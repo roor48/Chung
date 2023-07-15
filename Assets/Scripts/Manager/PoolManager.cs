@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -66,7 +65,6 @@ public class PoolManager : MonoBehaviour
         }
     }
 }
-
 
 [System.Serializable]
 public class Pool

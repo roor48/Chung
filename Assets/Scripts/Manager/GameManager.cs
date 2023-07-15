@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public string bulletName;
     public float Timer { get; private set; }
     public int Score { get; set; }
 

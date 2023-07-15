@@ -1,17 +1,29 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerMove : MonoBehaviour
 {
     private Rigidbody rigid;
     private Animator anim;
+    private TakeDamage takeDamage;
+    
+    [Header("Manager")]
+    public UIManager uiManager;
+
+    [Header("Player Stats")]
+    public int level;
+    public int[] xpArr = { 10, 30, 60 };
+    public int xp;
     
     [Header("Move")]
+    public float stdSpeed;
     public float speed;
     public float minYPos, maxYPos;
     private Vector2 inputVec;
 
     [Header("Shoot")]
+    private string bulletName;
     public float bulletSpd;
     public float shootDelay;
     private float curDelay;
@@ -26,10 +38,15 @@ public class PlayerMove : MonoBehaviour
     {
         rigid = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
+        takeDamage = GetComponent<TakeDamage>();
+
+        speed = stdSpeed;
+        bulletName = GameManager.Instance.bulletName;
     }
 
     private void Update()
     {
+        Cheats();
         if (GameManager.Instance.isCleared)
         {
             rigid.velocity = Vector3.zero;
@@ -37,11 +54,69 @@ public class PlayerMove : MonoBehaviour
         }
         Move();
         if (curBurstDelay > 0)
+        {
+            uiManager.SetBurstSlider(curBurstDelay / burstDelay);
             curBurstDelay -= Time.deltaTime;
+        }
+        else
+        {
+            uiManager.SetBurstSlider(0f);
+        }
         Shoot();
     }
 
+    #region Cheat
+    private void Cheats()
+    {
+        if (Input.GetKeyDown(KeyCode.F1))
+        {
+            takeDamage.noDamage = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.F2))
+        {
+            SetLevel(1);
+        }
+        else if (Input.GetKeyDown(KeyCode.F3))
+        {
+            SetLevel(-1);
+        }
+        else if (Input.GetKeyDown(KeyCode.F4))
+        {
+            takeDamage.health = takeDamage.maxHealth;
+        }
+        else if (Input.GetKeyDown(KeyCode.F5))
+        {
+            string[] itemNames = { "Player_Bullet_Cube", "Player_Bullet_Sphere" };
+            PoolManager.Instance.GetPool(itemNames[Random.Range(0, itemNames.Length)]).transform.position = new Vector3(7, 1.5f, 0f);
+        }
+        else if (Input.GetKeyDown(KeyCode.F6))
+        {
+            curBurstDelay = 0;
+            uiManager.SetBurstSlider(0f);
+        }
+        else if (Input.GetKeyDown(KeyCode.F7))
+        {
+            SceneManager.LoadScene("Stage " + SceneManager.GetActiveScene().name == "Stage 1" ? 2 : 1);
+        }
+        else if (Input.GetKeyDown(KeyCode.F8))
+        {
+            uiManager.ShowCheatPanel();
+        }
+    }
+    #endregion
+    
     #region Move
+    public void SetSpeed(float val)
+    {
+        speed = stdSpeed*2;
+
+        CancelInvoke(nameof(ResetSpeed));
+        Invoke(nameof(ResetSpeed), 10f);
+    }
+    private void ResetSpeed()
+    {
+        speed = stdSpeed;
+    }
     private void Move()
     {
         Vector3 camPos = GameManager.Instance.MainCam.WorldToViewportPoint(transform.position);
@@ -77,27 +152,35 @@ public class PlayerMove : MonoBehaviour
 
         GameObject bullet;
         Rigidbody bulletRigid;
+        Bullet bulletScript;
+
         switch (curPower)
         {
             case 0:
-                bullet = PoolManager.Instance.GetPool("Bullet_Player1");
+                bullet = PoolManager.Instance.GetPool(bulletName);
                 bulletRigid = bullet.GetComponent<Rigidbody>();
+                bulletScript = bullet.GetComponent<Bullet>();
+                
                 bullet.transform.position = transform.position;
                 bullet.transform.rotation = Quaternion.identity;
                 bullet.transform.localScale = Vector3.one * 0.5f;
                 bulletRigid.velocity = Vector3.zero;
-                    
+                bulletScript.dmg = 10;
+                
                 bulletRigid.AddForce(bulletSpd * Vector3.right, ForceMode.Impulse);
                 break;
             case 1:
                 for (int i = -1; i < 2; i += 2)
                 {
-                    bullet = PoolManager.Instance.GetPool("Bullet_Player1");
+                    bullet = PoolManager.Instance.GetPool(bulletName);
                     bulletRigid = bullet.GetComponent<Rigidbody>();
+                    bulletScript = bullet.GetComponent<Bullet>();
+                    
                     bullet.transform.position = transform.position + i / 2f * Vector3.forward;
                     bullet.transform.rotation = Quaternion.identity;
                     bullet.transform.localScale = Vector3.one * 0.5f;
                     bulletRigid.velocity = Vector3.zero;
+                    bulletScript.dmg = 10;
                     
                     bulletRigid.AddForce(bulletSpd * Vector3.right, ForceMode.Impulse);
                 }
@@ -105,12 +188,15 @@ public class PlayerMove : MonoBehaviour
             case 2:
                 for (int i = -1; i < 2; i += 2)
                 {
-                    bullet = PoolManager.Instance.GetPool("Bullet_Player1");
+                    bullet = PoolManager.Instance.GetPool(bulletName);
                     bulletRigid = bullet.GetComponent<Rigidbody>();
+                    bulletScript = bullet.GetComponent<Bullet>();
+                    
                     bullet.transform.position = transform.position + i / 2f * Vector3.forward;
                     bullet.transform.rotation = Quaternion.identity;
                     bullet.transform.localScale = Vector3.one / 3;
                     bulletRigid.velocity = Vector3.zero;
+                    bulletScript.dmg = 6;
                     
                     bulletRigid.AddForce(bulletSpd * Vector3.right, ForceMode.Impulse);
                 }
@@ -121,16 +207,28 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
-    private readonly int doBurst = Animator.StringToHash("doBurst");
+    public void ChangeWeapon(string _bulletName)
+    {
+        bulletName = _bulletName;
+    }
     #endregion
 
     #region Burst
-    private void OnBurst()
+    private readonly int doBurst = Animator.StringToHash("doBurst");
+    public void OnBurst()
     {
-        if (curBurstDelay > 0)
+        if (curBurstDelay > 0 || GameManager.Instance.isCleared)
             return;
         curBurstDelay = burstDelay;
         burstObj.SetTrigger(doBurst);
+    }
+    #endregion
+
+    #region Level
+
+    private void SetLevel(int lv)
+    {
+        level += lv;
     }
     #endregion
 }

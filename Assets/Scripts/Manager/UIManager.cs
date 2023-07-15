@@ -1,22 +1,28 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private Animator stageStart;
     [SerializeField] private Animator stageClear;
     
-    [Header("InPlay Text")]
+    [Header("InPlay UI")]
     public TMP_Text healthText;
     public TMP_Text timeText;
     public TMP_Text scoreText;
+    public Slider burstSlider;
     
-    [Header("ClearPanel")]
+    [Header("ClearPanel UI")]
     public GameObject clearPanel;
     public TMP_Text panelScore;
     public TMP_Text panelTime;
-    
+
+    [Header("Cheat UI")]
+    public GameObject cheatPanel;
+
+    public PlayerMove player;
     public TakeDamage playerHealth;
 
     private void Awake()
@@ -35,6 +41,22 @@ public class UIManager : MonoBehaviour
         panelTime.text = $"걸린 시간 : {time / 60:D2}분 {time % 60:D2}초";
     }
 
+    public void SetBurstSlider(float value)
+    {
+        burstSlider.value = value;
+    }
+
+    public void ShowCheatPanel()
+    {
+        cheatPanel.SetActive(true);
+        CancelInvoke(nameof(HideCheatPanel));
+        Invoke(nameof(HideCheatPanel), 5f);
+    }
+    private void HideCheatPanel()
+    {
+        cheatPanel.SetActive(false);
+    }
+    
     public void StageClear()
     {
         stageClear.SetTrigger(AnimatorID.showText);
