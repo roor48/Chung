@@ -37,6 +37,7 @@ public class PoolManager : MonoBehaviour
         {
             select = Instantiate(objDict[target][0], transform);
             objDict[target].Add(select);
+            select.gameObject.SetActive(false);
         }
         select.SetActive(true);
         return select;

@@ -20,7 +20,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public float Timer { get; set; }
+    public float Timer { get; private set; }
+    public int Score { get; set; }
 
     public bool isCleared = false;
 
@@ -45,6 +46,8 @@ public class GameManager : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         poolManager = GameObject.FindWithTag("PoolManager").GetComponent<PoolManager>();
+        Timer = 0;
+        Score = 0;
         SetCleared(false);
     }
     private void Update()

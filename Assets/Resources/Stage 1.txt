@@ -1,0 +1,5 @@
+2,Enemy_Normal,1
+0,Enemy_Normal,2
+2,Enemy_Normal,3
+0,Enemy_Normal,4
+3,Boss,0

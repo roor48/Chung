@@ -384,6 +384,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 60
   health: 60
+  score: 60
 --- !u!114 &978098425221821209
 MonoBehaviour:
   m_ObjectHideFlags: 0

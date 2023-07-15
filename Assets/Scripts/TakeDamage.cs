@@ -4,6 +4,7 @@ public class TakeDamage : MonoBehaviour
 {
     public int maxHealth;
     public int health;
+    public int score;
 
     private Animator anim;
     private bool isDead;
@@ -34,6 +35,7 @@ public class TakeDamage : MonoBehaviour
         if (health <= 0)
         {
             isDead = true;
+            GameManager.Instance.Score += score;
             if (gameObject.CompareTag("Boss"))
                 GameManager.Instance.poolManager.DisableEnemy();
             if (anim == null)
