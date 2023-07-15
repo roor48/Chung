@@ -28,7 +28,7 @@ public class Shoot : MonoBehaviour
 
     private void Update()
     {
-        if (takeDamage.health <= 0)
+        if (takeDamage.health <= 0 || GameManager.Instance.MainCam.WorldToViewportPoint(transform.position).x < 0.1f)
             return;
         BulletShoot();
     }
@@ -60,7 +60,7 @@ public class Shoot : MonoBehaviour
 
     private void NormalShoot()
     {
-        GameObject bullet = GameManager.Instance.poolManager.GetPool(bulletName);
+        GameObject bullet = PoolManager.Instance.GetPool(bulletName);
         Rigidbody bulletRigid = bullet.GetComponent<Rigidbody>();
         bullet.transform.position = transform.position;
         bullet.transform.rotation = Quaternion.identity;
@@ -77,9 +77,9 @@ public class Shoot : MonoBehaviour
     private readonly WaitForSeconds wait_3 = new(0.3f);
     private IEnumerator MetalShoot()
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 3 && takeDamage.health > 0; i++)
         {
-            GameObject bullet = GameManager.Instance.poolManager.GetPool(bulletName);
+            GameObject bullet = PoolManager.Instance.GetPool(bulletName);
             Rigidbody bulletRigid = bullet.GetComponent<Rigidbody>();
             bullet.transform.position = transform.position;
             bullet.transform.rotation = Quaternion.identity;
@@ -99,11 +99,10 @@ public class Shoot : MonoBehaviour
     {
         for (int i = -1; i < 2; i++)
         {
-            GameObject bullet = GameManager.Instance.poolManager.GetPool(bulletName);
+            GameObject bullet = PoolManager.Instance.GetPool(bulletName);
             Rigidbody bulletRigid = bullet.GetComponent<Rigidbody>();
             bullet.transform.position = transform.position;
             bullet.transform.rotation = Quaternion.identity;
-            // bullet.transform.eulerAngles = new Vector3(0, 0, -90);
             bulletRigid.velocity = Vector3.zero;
                 
             Vector3 dirVec = playerTrnas.position - transform.position;

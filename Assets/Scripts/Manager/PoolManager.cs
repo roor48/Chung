@@ -1,22 +1,26 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PoolManager : MonoBehaviour
 {
+    public static PoolManager Instance { get; private set; }
+
     [SerializeField] private Pool[] pools;
 
     private Dictionary<string, List<GameObject>> objDict;
     private void Awake()
     {
         objDict = new();
+        Instance = this;
 
-        for (int i = 0; i < pools.Length; i++)
+        foreach (Pool pool in pools)
         {
-            objDict[pools[i].name] = new();
-            for (int j = 0; j < pools[i].size; j++)
+            objDict[pool.name] = new();
+            for (int j = 0; j < pool.size; j++)
             {
-                objDict[pools[i].name].Add(Instantiate(pools[i].obj, transform));
-                objDict[pools[i].name][j].SetActive(false);
+                objDict[pool.name].Add(Instantiate(pool.obj, transform));
+                objDict[pool.name][j].SetActive(false);
             }
         }
     }
@@ -43,15 +47,20 @@ public class PoolManager : MonoBehaviour
         return select;
     }
 
-    public void DisableEnemy()
+    public void DamageEnemy(bool doDisable)
     {
-        for (int i = 0; i < pools.Length; i++)
+        foreach (Pool pool in pools)
         {
-            if (pools[i].obj.CompareTag("Enemy") || pools[i].obj.CompareTag("Bullet"))
+            if (pool.obj.CompareTag("Enemy") || pool.obj.CompareTag("Bullet"))
             {
-                for (int j = 0; j < objDict[pools[i].name].Count; j++)
+                for (int j = 0; j < objDict[pool.name].Count; j++)
                 {
-                    objDict[pools[i].name][j].SetActive(false);
+                    if (!objDict[pool.name][j].activeSelf) continue;
+
+                    if (doDisable || pool.obj.CompareTag("Bullet"))
+                        objDict[pool.name][j].SetActive(false);
+                    else
+                        objDict[pool.name][j].GetComponent<TakeDamage>().GetDamage(100);
                 }
             }
         }

@@ -142,9 +142,9 @@ GameObject:
   - component: {fileID: 2868633164060121230}
   - component: {fileID: 8577546945893242031}
   - component: {fileID: -6683621418049795060}
-  - component: {fileID: 3671549196631446264}
-  - component: {fileID: 4406000552846000715}
   - component: {fileID: 6939924506696529972}
+  - component: {fileID: 4406000552846000715}
+  - component: {fileID: 3671549196631446264}
   m_Layer: 6
   m_Name: Enemy_MeltalHelmet
   m_TagString: Enemy
@@ -238,6 +238,33 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6939924506696529972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5081174927614239678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 403f7186916c07849994951e1681c83a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 40
+  health: 40
+--- !u!114 &4406000552846000715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5081174927614239678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7591feb51c1e7f4589cd97ed62876aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4
 --- !u!114 &3671549196631446264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,36 +279,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyList: 1
   bulletName: Bullet_Leaf
-  bulletSpd: 12
-  delay: 2
---- !u!114 &4406000552846000715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5081174927614239678}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7591feb51c1e7f4589cd97ed62876aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 6
---- !u!114 &6939924506696529972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5081174927614239678}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 403f7186916c07849994951e1681c83a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 75
-  health: 75
-  score: 75
+  bulletSpd: 10
+  delay: 3
 --- !u!1 &5211401026879398127
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,6 +1,14 @@
-// Enemy_Normal, Enemy_MetalHelmet, Bullet_Carrot
+// Enemy_Normal, Enemy_MetalHelmet, Enemy_Rabbit
+// Delay, Name, Point(1~7)
 2,Enemy_Normal,1
 0,Enemy_Normal,2
-2,Enemy_Normal,3
-0,Enemy_Normal,4
+2,Enemy_Normal,6
+0,Enemy_Normal,7
+3,Enemy_MetalHelmet,4
+0.5,Enemy_Rabbit,3
+0,Enemy_Rabbit,5
 3,Boss,0
+1,Enemy_Normal,1
+1,Enemy_Normal,7
+2,Enemy_MetalHelmet,2
+2,Enemy_MetalHelmet,6

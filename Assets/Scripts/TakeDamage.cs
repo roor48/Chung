@@ -4,7 +4,7 @@ public class TakeDamage : MonoBehaviour
 {
     public int maxHealth;
     public int health;
-    public int score;
+    // public int score;
 
     private Animator anim;
     private bool isDead;
@@ -32,12 +32,13 @@ public class TakeDamage : MonoBehaviour
     public void GetDamage(int dmg)
     {
         health -= dmg;
+        Debug.Log(name + health);
         if (health <= 0)
         {
             isDead = true;
-            GameManager.Instance.Score += score;
+            GameManager.Instance.Score += maxHealth;
             if (gameObject.CompareTag("Boss"))
-                GameManager.Instance.poolManager.DisableEnemy();
+                PoolManager.Instance.DamageEnemy(true);
             if (anim == null)
                 SetInActive(); // 애니메이터가 없으면 바로 호출
             else
@@ -45,7 +46,7 @@ public class TakeDamage : MonoBehaviour
         }
     }
 
-    // 애니메이션에서 컨트롤
+    // 애니메이션에서 호출
     private void SetInActive()
     {
         gameObject.SetActive(false);

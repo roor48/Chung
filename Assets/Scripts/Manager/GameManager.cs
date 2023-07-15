@@ -7,8 +7,6 @@ public class GameManager : MonoBehaviour
     private static GameManager _instance;
     public static GameManager Instance => _instance ? _instance : null;
 
-    public PoolManager poolManager;
-
     private Camera mainCam;
     public Camera MainCam
     {
@@ -45,7 +43,6 @@ public class GameManager : MonoBehaviour
     // 체인을 걸어서 이 함수는 매 씬마다 호출된다.
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        poolManager = GameObject.FindWithTag("PoolManager").GetComponent<PoolManager>();
         Timer = 0;
         Score = 0;
         SetCleared(false);

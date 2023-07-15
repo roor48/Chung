@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7545676429980340258}
   - component: {fileID: 5275253103379031104}
   m_Layer: 3
-  m_Name: Bullet
+  m_Name: Bullet1
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,4 +146,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbf0c892e263f65448103a97924ddc95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dmg: 25
+  standardDmg: 20
+  dmg: 10

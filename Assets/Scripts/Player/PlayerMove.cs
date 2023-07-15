@@ -16,6 +16,11 @@ public class PlayerMove : MonoBehaviour
     public float shootDelay;
     private float curDelay;
     public int curPower;
+    
+    [Header("Burst")]
+    public Animator burstObj;
+    public float burstDelay;
+    private float curBurstDelay;
 
     private void Awake()
     {
@@ -31,9 +36,12 @@ public class PlayerMove : MonoBehaviour
             return;
         }
         Move();
+        if (curBurstDelay > 0)
+            curBurstDelay -= Time.deltaTime;
         Shoot();
     }
-    
+
+    #region Move
     private void Move()
     {
         Vector3 camPos = GameManager.Instance.MainCam.WorldToViewportPoint(transform.position);
@@ -55,7 +63,9 @@ public class PlayerMove : MonoBehaviour
             _moveDir = 1;
         anim.SetInteger(moveDir, _moveDir);
     }
+    #endregion
 
+    #region Shoot
     private void Shoot()
     {
         if (curDelay > 0)
@@ -65,17 +75,62 @@ public class PlayerMove : MonoBehaviour
         }
         curDelay = shootDelay;
 
+        GameObject bullet;
+        Rigidbody bulletRigid;
         switch (curPower)
         {
             case 0:
-                GameObject bullet = GameManager.Instance.poolManager.GetPool("Bullet_Player");
-                Rigidbody bulletRigid = bullet.GetComponent<Rigidbody>();
+                bullet = PoolManager.Instance.GetPool("Bullet_Player1");
+                bulletRigid = bullet.GetComponent<Rigidbody>();
                 bullet.transform.position = transform.position;
                 bullet.transform.rotation = Quaternion.identity;
+                bullet.transform.localScale = Vector3.one * 0.5f;
                 bulletRigid.velocity = Vector3.zero;
-                
+                    
                 bulletRigid.AddForce(bulletSpd * Vector3.right, ForceMode.Impulse);
+                break;
+            case 1:
+                for (int i = -1; i < 2; i += 2)
+                {
+                    bullet = PoolManager.Instance.GetPool("Bullet_Player1");
+                    bulletRigid = bullet.GetComponent<Rigidbody>();
+                    bullet.transform.position = transform.position + i / 2f * Vector3.forward;
+                    bullet.transform.rotation = Quaternion.identity;
+                    bullet.transform.localScale = Vector3.one * 0.5f;
+                    bulletRigid.velocity = Vector3.zero;
+                    
+                    bulletRigid.AddForce(bulletSpd * Vector3.right, ForceMode.Impulse);
+                }
+                break;
+            case 2:
+                for (int i = -1; i < 2; i += 2)
+                {
+                    bullet = PoolManager.Instance.GetPool("Bullet_Player1");
+                    bulletRigid = bullet.GetComponent<Rigidbody>();
+                    bullet.transform.position = transform.position + i / 2f * Vector3.forward;
+                    bullet.transform.rotation = Quaternion.identity;
+                    bullet.transform.localScale = Vector3.one / 3;
+                    bulletRigid.velocity = Vector3.zero;
+                    
+                    bulletRigid.AddForce(bulletSpd * Vector3.right, ForceMode.Impulse);
+                }
+
+                goto case 0;
+            case 3:
                 break;
         }
     }
+
+    private readonly int doBurst = Animator.StringToHash("doBurst");
+    #endregion
+
+    #region Burst
+    private void OnBurst()
+    {
+        if (curBurstDelay > 0)
+            return;
+        curBurstDelay = burstDelay;
+        burstObj.SetTrigger(doBurst);
+    }
+    #endregion
 }

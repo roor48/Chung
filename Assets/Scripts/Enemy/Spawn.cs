@@ -84,7 +84,7 @@ public class Spawn : MonoBehaviour
             }
             else
             {
-                GameObject enemy = GameManager.Instance.poolManager.GetPool(spawnList[spawnIndex].name);
+                GameObject enemy = PoolManager.Instance.GetPool(spawnList[spawnIndex].name);
                 enemy.transform.position = points[spawnPoint].position;
             }
 

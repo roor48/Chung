@@ -67,7 +67,7 @@ public class BossKing : MonoBehaviour
         ranBullet = ranBullet == 0 ? 30 : 37;
         for (int j = 0; j < ranBullet; j++)
         {
-            GameObject bullet = GameManager.Instance.poolManager.GetPool("Bullet_King");
+            GameObject bullet = PoolManager.Instance.GetPool("Bullet_King");
             Rigidbody bulletRigid = bullet.GetComponent<Rigidbody>();
             bullet.transform.position = transform.position;
             bulletRigid.velocity = Vector3.zero;
@@ -83,7 +83,7 @@ public class BossKing : MonoBehaviour
 
         for (int i = 0; i < 15; i++)
         {
-            GameObject bullet = GameManager.Instance.poolManager.GetPool("Bullet_King");
+            GameObject bullet = PoolManager.Instance.GetPool("Bullet_King");
             Rigidbody bulletRigid = bullet.GetComponent<Rigidbody>();
             bullet.transform.position = transform.position + Vector3.left * 3;
             bulletRigid.velocity = Vector3.zero;
