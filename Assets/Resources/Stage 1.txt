@@ -1,3 +1,4 @@
+// Enemy_Normal, Enemy_MetalHelmet, Bullet_Carrot
 2,Enemy_Normal,1
 0,Enemy_Normal,2
 2,Enemy_Normal,3

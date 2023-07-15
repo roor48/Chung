@@ -38,15 +38,18 @@ public class Spawn : MonoBehaviour
         while (stringReader != null)
         {
             string line = stringReader.ReadLine();
-
             if (line == null)
                 break;
+            if (line[0] == '/')
+                continue;
             
-            SpawnStruct spawnData = new();
-            spawnData.delay = float.Parse(line.Split(',')[0]);
-            spawnData.name = line.Split(',')[1];
-            spawnData.point = int.Parse(line.Split(',')[2]);
-            spawnList.Add(spawnData );
+            SpawnStruct spawnData = new()
+            {
+                delay = float.Parse(line.Split(',')[0]),
+                name = line.Split(',')[1],
+                point = int.Parse(line.Split(',')[2])
+            };
+            spawnList.Add(spawnData);
         }
         
         stringReader.Close();
@@ -70,25 +73,29 @@ public class Spawn : MonoBehaviour
             return;
         }
         curDelay = 0;
-        int spawnPoint = spawnList[spawnIndex].point;
 
-        if (spawnList[spawnIndex].name == "Boss")
+        do
         {
-            bossObject.SetActive(true);
-        }
-        else
-        {
-            GameObject enemy = GameManager.Instance.poolManager.GetPool(spawnList[spawnIndex].name);
-            enemy.transform.position = points[spawnPoint].position;
-        }
+            int spawnPoint = spawnList[spawnIndex].point;
 
-        spawnIndex++;
-        if (spawnIndex == spawnList.Count)
-        {
-            spawnEnd = true;
-            return;
-        }
-        
-        spawnDelay = spawnList[spawnIndex].delay;
+            if (spawnList[spawnIndex].name == "Boss")
+            {
+                bossObject.SetActive(true);
+            }
+            else
+            {
+                GameObject enemy = GameManager.Instance.poolManager.GetPool(spawnList[spawnIndex].name);
+                enemy.transform.position = points[spawnPoint].position;
+            }
+
+            spawnIndex++;
+            if (spawnIndex == spawnList.Count)
+            {
+                spawnEnd = true;
+                return;
+            }
+
+            spawnDelay = spawnList[spawnIndex].delay;
+        } while (spawnDelay == 0);
     }
 }
