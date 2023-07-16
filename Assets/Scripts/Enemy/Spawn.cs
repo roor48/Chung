@@ -14,9 +14,10 @@ public class Spawn : MonoBehaviour
     public float spawnDelay;
     private float curDelay;
 
-    public List<SpawnStruct> spawnList;
+    private List<SpawnStruct> spawnList;
     public int spawnIndex;
     public bool spawnEnd;
+    private bool firstEnd;
     private void Awake()
     {
         points = GetComponentsInChildren<Transform>();
@@ -60,8 +61,13 @@ public class Spawn : MonoBehaviour
     private void Update()
     {
         if (spawnEnd)
+        {
+            if (firstEnd)
+                spawnDelay = 4f;
+            RandomSpawn();
             return;
-        
+        }
+
         SpawnEnemy();
     }
 
@@ -89,7 +95,7 @@ public class Spawn : MonoBehaviour
             }
 
             spawnIndex++;
-            if (spawnIndex == spawnList.Count)
+            if (spawnIndex >= spawnList.Count)
             {
                 spawnEnd = true;
                 return;
@@ -97,5 +103,20 @@ public class Spawn : MonoBehaviour
 
             spawnDelay = spawnList[spawnIndex].delay;
         } while (spawnDelay == 0);
+    }
+
+    private readonly string[] enemyNames = {"Enemy_Normal", "Enemy_MetalHelmet", "Enemy_Rabbit"};
+    private void RandomSpawn()
+    {
+        if (curDelay < spawnDelay)
+        {
+            curDelay += Time.deltaTime;
+            return;
+        }
+        curDelay = 0;
+        spawnDelay = Random.Range(3, 7);
+
+        GameObject enemy = PoolManager.Instance.GetPool(enemyNames[Random.Range(0, 3)]);
+        enemy.transform.position = points[Random.Range(1, 8)].position;
     }
 }

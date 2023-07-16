@@ -157,5 +157,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbf0c892e263f65448103a97924ddc95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  standardDmg: 3.5
-  dmg: 5
+  bulletType: 0
+  throughCnt: 0
+  curThroughCnt: 0
+  stdDmg: 4
+  dmg: 0

@@ -252,6 +252,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 40
   health: 40
+  xp: 5
+  noDamage: 0
 --- !u!114 &4406000552846000715
 MonoBehaviour:
   m_ObjectHideFlags: 0

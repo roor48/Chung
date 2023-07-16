@@ -1,6 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
@@ -12,7 +13,14 @@ public class UIManager : MonoBehaviour
     public TMP_Text healthText;
     public TMP_Text timeText;
     public TMP_Text scoreText;
+    public TMP_Text levelText;
     public Slider burstSlider;
+    public Animator levelUpAnim;
+    public Slider expSlider;
+    public GameObject pausePanel;
+    
+    [Header("GameOver UI")]
+    public GameObject goPanel;
     
     [Header("ClearPanel UI")]
     public GameObject clearPanel;
@@ -21,6 +29,7 @@ public class UIManager : MonoBehaviour
 
     [Header("Cheat UI")]
     public GameObject cheatPanel;
+    public TMP_Text cPText;
 
     public PlayerMove player;
     public TakeDamage playerHealth;
@@ -36,9 +45,13 @@ public class UIManager : MonoBehaviour
         int time = (int)GameManager.Instance.Timer;
         timeText.text = $"{time / 60:D2} : {time % 60:D2}";
         scoreText.text = $"{GameManager.Instance.Score:#,##0}점";
+        levelText.text = $"현재 레벨 : {PlayerMove.Instance.level}";
 
         panelScore.text = $"점수 : {GameManager.Instance.Score:#,##0}";
         panelTime.text = $"걸린 시간 : {time / 60:D2}분 {time % 60:D2}초";
+
+        burstSlider.value = player.curBurstDelay / player.burstDelay;
+        expSlider.value = (float)player.exp / player.nextExp;
     }
 
     public void SetBurstSlider(float value)
@@ -48,9 +61,11 @@ public class UIManager : MonoBehaviour
 
     public void ShowCheatPanel()
     {
-        cheatPanel.SetActive(true);
+        cheatPanel.SetActive(!cheatPanel.activeSelf);
+        cPText.text = $"현재 경험치 : {player.exp}\n\n현재 레벨 : {player.level}\n\n레벨 업까지 필요한 경험치 : {(player.nextExp - player.exp < 0 ? 0 : player.nextExp - player.exp)}";
         CancelInvoke(nameof(HideCheatPanel));
-        Invoke(nameof(HideCheatPanel), 5f);
+        if (cheatPanel.activeSelf)
+            Invoke(nameof(HideCheatPanel), 5f);
     }
     private void HideCheatPanel()
     {
@@ -67,5 +82,20 @@ public class UIManager : MonoBehaviour
     {
         clearPanel.SetActive(true);
         GameManager.Instance.SetCleared(true);
+    }
+
+
+    public void GoMainMenu()
+    {
+        SceneManager.LoadScene("Main");
+    }
+    public void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void GoNextScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }

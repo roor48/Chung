@@ -4,17 +4,25 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMove : MonoBehaviour
 {
+    public static PlayerMove Instance { get; private set; }
+    
     private Rigidbody rigid;
     private Animator anim;
+    private AudioSource audioSource;
     private TakeDamage takeDamage;
     
     [Header("Manager")]
     public UIManager uiManager;
 
+    [Header("Sounds")]
+    public AudioClip[] audios;
+
     [Header("Player Stats")]
     public int level;
-    public int[] xpArr = { 10, 30, 60 };
-    public int xp;
+    public int nextExp = 15;
+    public int exp;
+    public int atkBonus;
+    public bool isDead;
     
     [Header("Move")]
     public float stdSpeed;
@@ -23,46 +31,50 @@ public class PlayerMove : MonoBehaviour
     private Vector2 inputVec;
 
     [Header("Shoot")]
+    public Material[] bulletMat;
     private string bulletName;
     public float bulletSpd;
     public float shootDelay;
     private float curDelay;
     public int curPower;
-    
+
     [Header("Burst")]
     public Animator burstObj;
     public float burstDelay;
-    private float curBurstDelay;
+    public float curBurstDelay;
+
+    [Header("Pet")]
+    public CreatePet createPet;
 
     private void Awake()
     {
         rigid = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
         takeDamage = GetComponent<TakeDamage>();
 
+        Instance = this;
         speed = stdSpeed;
-        bulletName = GameManager.Instance.bulletName;
+        bulletName = "Bullet_Player_Sphere";
     }
 
     private void Update()
     {
         Cheats();
-        if (GameManager.Instance.isCleared)
+        if (GameManager.Instance.isCleared || isDead)
         {
             rigid.velocity = Vector3.zero;
             return;
         }
-        Move();
-        if (curBurstDelay > 0)
-        {
-            uiManager.SetBurstSlider(curBurstDelay / burstDelay);
-            curBurstDelay -= Time.deltaTime;
-        }
+
+        if (Input.GetKey(KeyCode.F))
+            Time.timeScale = 10f;
         else
-        {
-            uiManager.SetBurstSlider(0f);
-        }
+            Time.timeScale = uiManager.pausePanel.activeSelf ? 0 : 1;
+        LimitMove();
+        Burst();
         Shoot();
+
     }
 
     #region Cheat
@@ -70,15 +82,15 @@ public class PlayerMove : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F1))
         {
-            takeDamage.noDamage = true;
+            takeDamage.noDamage = !takeDamage.noDamage;
         }
         else if (Input.GetKeyDown(KeyCode.F2))
         {
-            SetLevel(1);
+            LevelUp(1);
         }
         else if (Input.GetKeyDown(KeyCode.F3))
         {
-            SetLevel(-1);
+            LevelUp(-1);
         }
         else if (Input.GetKeyDown(KeyCode.F4))
         {
@@ -86,7 +98,7 @@ public class PlayerMove : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.F5))
         {
-            string[] itemNames = { "Player_Bullet_Cube", "Player_Bullet_Sphere" };
+            string[] itemNames = { "Weapon_Cube", "Weapon_Sphere" };
             PoolManager.Instance.GetPool(itemNames[Random.Range(0, itemNames.Length)]).transform.position = new Vector3(7, 1.5f, 0f);
         }
         else if (Input.GetKeyDown(KeyCode.F6))
@@ -96,19 +108,24 @@ public class PlayerMove : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.F7))
         {
-            SceneManager.LoadScene("Stage " + SceneManager.GetActiveScene().name == "Stage 1" ? 2 : 1);
+            SceneManager.LoadScene("Stage " + (SceneManager.GetActiveScene().name == "Stage 1" ? 2 : 1));
         }
         else if (Input.GetKeyDown(KeyCode.F8))
         {
             uiManager.ShowCheatPanel();
         }
+        else if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape))
+        {
+            uiManager.pausePanel.SetActive(!uiManager.pausePanel.activeSelf);
+        }
     }
     #endregion
     
     #region Move
-    public void SetSpeed(float val)
+    public void SetSpeed()
     {
         speed = stdSpeed*2;
+        rigid.velocity = new Vector3(inputVec.x, 0, inputVec.y) * speed;
 
         CancelInvoke(nameof(ResetSpeed));
         Invoke(nameof(ResetSpeed), 10f);
@@ -116,8 +133,9 @@ public class PlayerMove : MonoBehaviour
     private void ResetSpeed()
     {
         speed = stdSpeed;
+        rigid.velocity = new Vector3(inputVec.x, 0, inputVec.y) * speed;
     }
-    private void Move()
+    private void LimitMove()
     {
         Vector3 camPos = GameManager.Instance.MainCam.WorldToViewportPoint(transform.position);
         if ((camPos.x < 0 && inputVec.x < 0) || (camPos.x > 1 && inputVec.x > 0))
@@ -141,6 +159,9 @@ public class PlayerMove : MonoBehaviour
     #endregion
 
     #region Shoot
+
+    public string GetBulletName => bulletName;
+
     private void Shoot()
     {
         if (curDelay > 0)
@@ -153,7 +174,7 @@ public class PlayerMove : MonoBehaviour
         GameObject bullet;
         Rigidbody bulletRigid;
         Bullet bulletScript;
-
+        
         switch (curPower)
         {
             case 0:
@@ -165,7 +186,7 @@ public class PlayerMove : MonoBehaviour
                 bullet.transform.rotation = Quaternion.identity;
                 bullet.transform.localScale = Vector3.one * 0.5f;
                 bulletRigid.velocity = Vector3.zero;
-                bulletScript.dmg = 10;
+                bulletScript.dmg = (int)(bulletScript.stdDmg + bulletScript.stdDmg * (atkBonus / 10f));
                 
                 bulletRigid.AddForce(bulletSpd * Vector3.right, ForceMode.Impulse);
                 break;
@@ -180,7 +201,7 @@ public class PlayerMove : MonoBehaviour
                     bullet.transform.rotation = Quaternion.identity;
                     bullet.transform.localScale = Vector3.one * 0.5f;
                     bulletRigid.velocity = Vector3.zero;
-                    bulletScript.dmg = 10;
+                    bulletScript.dmg = (int)(bulletScript.stdDmg + bulletScript.stdDmg * (atkBonus / 10f));
                     
                     bulletRigid.AddForce(bulletSpd * Vector3.right, ForceMode.Impulse);
                 }
@@ -194,26 +215,45 @@ public class PlayerMove : MonoBehaviour
                     
                     bullet.transform.position = transform.position + i / 2f * Vector3.forward;
                     bullet.transform.rotation = Quaternion.identity;
-                    bullet.transform.localScale = Vector3.one / 3;
+                    bullet.transform.localScale = Vector3.one * 0.3f;
                     bulletRigid.velocity = Vector3.zero;
-                    bulletScript.dmg = 6;
+                    bulletScript.dmg = (int)(bulletScript.stdDmg * 0.6f + bulletScript.stdDmg * (atkBonus / 10f));
                     
                     bulletRigid.AddForce(bulletSpd * Vector3.right, ForceMode.Impulse);
                 }
 
                 goto case 0;
-            case 3:
-                break;
         }
     }
 
     public void ChangeWeapon(string _bulletName)
     {
+        audioSource.clip = audios[0];
+        audioSource.Play();
+        if (bulletName == _bulletName)
+        {
+            curPower++;
+            if (curPower > 2)
+            {
+                curPower = 2;
+                GameManager.Instance.Score += 500;
+            }
+            return;
+        }
+
+        curPower = 0;
         bulletName = _bulletName;
     }
     #endregion
 
     #region Burst
+    private void Burst()
+    {
+        if (curBurstDelay > 0)
+        {
+            curBurstDelay -= Time.deltaTime;
+        }
+    }
     private readonly int doBurst = Animator.StringToHash("doBurst");
     public void OnBurst()
     {
@@ -225,10 +265,33 @@ public class PlayerMove : MonoBehaviour
     #endregion
 
     #region Level
-
-    private void SetLevel(int lv)
+    public void SetLevel(int xp)
     {
-        level += lv;
+        exp += xp;
+        if (exp >= nextExp)
+        {
+            LevelUp(exp/nextExp);
+            exp %= nextExp;
+            nextExp *= 2;
+        }
+    }
+
+    private readonly int levelUp = Animator.StringToHash("LevelUp");
+    private void LevelUp(int val)
+    {
+        level += val;       // 레벨 업 시 스탯 상승
+        uiManager.levelUpAnim.SetTrigger(levelUp);
+        takeDamage.maxHealth += 20;
+        takeDamage.health += takeDamage.maxHealth / 3;
+        if (takeDamage.health > takeDamage.maxHealth)
+            takeDamage.health = takeDamage.maxHealth;
+        atkBonus += 1;
     }
     #endregion
+
+    public void OnDie()
+    {
+        uiManager.goPanel.SetActive(true);
+        isDead = true;
+    }
 }

@@ -9,6 +9,7 @@ TagManager:
   - Boss
   - PoolManager
   - Item
+  - Weapon
   layers:
   - Default
   - TransparentFX

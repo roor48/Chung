@@ -8,10 +8,14 @@ public class BossKing : MonoBehaviour
     
     private Rigidbody rigid;
     private Animator anim;
+    private AudioSource audioSource;
+    
+    public AudioClip[] audios;
     private void Awake()
     {
         rigid = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnEnable()
@@ -62,7 +66,9 @@ public class BossKing : MonoBehaviour
 
     private void JumpPattern() // 애니메이션
     {
-        Debug.Log("Jump!");
+        audioSource.clip = audios[0];
+        audioSource.Play();
+
         int ranBullet = Random.Range(0,2);
         ranBullet = ranBullet == 0 ? 30 : 37;
         for (int j = 0; j < ranBullet; j++)
@@ -76,11 +82,8 @@ public class BossKing : MonoBehaviour
             bulletRigid.AddForce(dirVec * 5, ForceMode.Impulse);
         }
     }
-
     private void AttackPattern() // 애니메이션
     {
-        Debug.Log("Attack!");
-
         for (int i = 0; i < 15; i++)
         {
             GameObject bullet = PoolManager.Instance.GetPool("Bullet_King");
@@ -101,7 +104,6 @@ public class BossKing : MonoBehaviour
     }
     private void SetInActive() // 애니메이션
     {
-        Debug.Log(this.name);
         gameObject.SetActive(false);
         uiManager.StageClear();
     }

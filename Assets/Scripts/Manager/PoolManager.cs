@@ -8,7 +8,7 @@ public class PoolManager : MonoBehaviour
     [SerializeField] private Pool[] pools;
 
     private Dictionary<string, List<GameObject>> objDict;
-    private void Awake()
+    private void Start()
     {
         objDict = new();
         Instance = this;

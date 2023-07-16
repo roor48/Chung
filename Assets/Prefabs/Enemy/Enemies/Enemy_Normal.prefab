@@ -185,6 +185,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   health: 20
+  xp: 3
+  noDamage: 0
 --- !u!114 &187322172260659744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,7 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7591feb51c1e7f4589cd97ed62876aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 4
 --- !u!114 &2562540297973045750
 MonoBehaviour:
   m_ObjectHideFlags: 0

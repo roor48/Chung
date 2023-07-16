@@ -23,7 +23,7 @@ public class Shoot : MonoBehaviour
     private void Awake()
     {
         takeDamage = GetComponent<TakeDamage>();
-        playerTrnas = GameObject.FindWithTag("Player").transform;
+        playerTrnas = PlayerMove.Instance.transform;
     }
 
     private void Update()

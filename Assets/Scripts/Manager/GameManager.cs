@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public string bulletName;
+    // public string bulletName;
     public float Timer { get; private set; }
     public int Score { get; set; }
 
@@ -58,10 +58,5 @@ public class GameManager : MonoBehaviour
     public void SetCleared(bool _flag)
     {
         isCleared = _flag;
-    }
-
-    public void NextScene(int sceneNum)
-    {
-        SceneManager.LoadScene("Stage " + sceneNum);
     }
 }
