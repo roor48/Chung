@@ -5,19 +5,665 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e34de0e-f3dd-4c4e-b133-97dea5675b16" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Bullets/Bullet1.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Bullets/Bullet1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animator/Animations/Item_Idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animator/Animations/Item_Idle.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Burst.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Burst.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Bullets/Bullet_Carrot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Bullets/Bullet_Carrot.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Bullets/Bullet_King.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Bullets/Bullet_King.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Bullets/Bullet_Normal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Bullets/Bullet_Normal.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Bullets/Leaf Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Bullets/Leaf Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemies/Enemy_MeltalHelmet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemies/Enemy_MeltalHelmet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemies/Enemy_Normal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemies/Enemy_Normal.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemies/Enemy_Rabbit.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemies/Enemy_Rabbit.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Bullets/Bullet_Player_Cube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Bullets/Bullet_Player_Cube.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Bullets/Bullet_Player_Sphere.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Bullets/Bullet_Player_Sphere.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Bullets/Cyan.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Bullets/Cyan.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Stage 1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Stage 1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Stage 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Stage 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Stage 2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Stage 2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Stage 2.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Stage 2.unity.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Boss/BossKing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Boss/BossKing.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Shoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Shoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Spawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Spawn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Item.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Item.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/PoolManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/PoolManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/UIManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMove.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/TakeDamage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TakeDamage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/10Button_Midl_Yellow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/10Button_Midl_Yellow.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/11Button_Midl_Blue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/11Button_Midl_Blue.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/12Button_Long_Blue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/12Button_Long_Blue.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/13Button_Long_Green.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/13Button_Long_Green.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/14Button_Long_Red.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/14Button_Long_Red.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/15Button_Long_Yellow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/15Button_Long_Yellow.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/16bttn-little.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/16bttn-little.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/17bttn-little.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/17bttn-little.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/18bttn-little.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/18bttn-little.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/19bttn-midl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/19bttn-midl.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/1button_green_middle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/1button_green_middle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/20bttn-midl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/20bttn-midl.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/21bttn-midl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/21bttn-midl.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/22Button_Midl_Green.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/22Button_Midl_Green.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/23Button_Midl_Red.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/23Button_Midl_Red.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/24Button_Midl_Blue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/24Button_Midl_Blue.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/25Button_Long_Green.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/25Button_Long_Green.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/26Button_Long_Blue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/26Button_Long_Blue.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/27Button_Long_Red.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/27Button_Long_Red.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/28button_green.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/28button_green.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/29button_blue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/29button_blue.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/2button_blue_middle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/2button_blue_middle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/30button_red.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/30button_red.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/3button_green_middle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/3button_green_middle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/4button_green_middle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/4button_green_middle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/5button_blue_middle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/5button_blue_middle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/6button_green_middle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/6button_green_middle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/7button_green_middle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/7button_green_middle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/8Button_Midl_Red.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/8Button_Midl_Red.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/9Button_Midl_Green.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/PNG/9Button_Midl_Green.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/Scenes/SampleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/Scenes/SampleScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/buttons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/buttons.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/buttons.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/buttons.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/buttons_Back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Buttons/buttons_Back.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/AllSlime.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/AllSlime.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Animated.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Animated.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Animation.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Animation/EventAnimation.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Animation/EventAnimation/Rig_Attack.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Animation/EventAnimation/Rig_Attack.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Animation/EventAnimation/Rig_Damage.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Animation/EventAnimation/Rig_Damage.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Animation/EventAnimation/Rig_Damage_02.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Animation/EventAnimation/Rig_Damage_02.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Animation/EventAnimation/Rig_Damage_03.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Animation/EventAnimation/Rig_Damage_03.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Animation/EventAnimation/Rig_jump.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Animation/EventAnimation/Rig_jump.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Animation/Slime_Anim.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Animation/Slime_Anim.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Animator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Animator/Slime.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Animator/Slime.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Cameras.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Cameras/CameraGuidelines.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Cameras/CameraGuidelines.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Cameras/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Cameras/Prefabs/FreeLookCameraRig.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Cameras/Prefabs/FreeLookCameraRig.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Cameras/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Cameras/Scripts/AbstractTargetFollower.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Cameras/Scripts/AbstractTargetFollower.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Cameras/Scripts/FreeLookCam.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Cameras/Scripts/FreeLookCam.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Cameras/Scripts/PivotBasedCameraRig.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Cameras/Scripts/PivotBasedCameraRig.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Materials/Face.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Materials/Face/Face 0.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Materials/Face/Face 0.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Materials/Face/Face 1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Materials/Face/Face 1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Materials/Face/Face 2.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Materials/Face/Face 2.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Materials/Face/Face 3.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Materials/Face/Face 3.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Materials/Face/Face.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Materials/Face/Face.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Materials/Ground.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Materials/Ground.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Materials/Hat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Materials/Hat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Materials/Slime 1.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Materials/Slime 1/Slime1_King.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Materials/Slime 1/Slime1_King.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Materials/Slime 1/Slime1_Viking.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Materials/Slime 1/Slime1_Viking.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Materials/Slime 1/Slime1_White.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Materials/Slime 1/Slime1_White.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Materials/Slime 2.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Materials/Slime 2/Slime2.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Materials/Slime 2/Slime2.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Materials/Slime 3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Materials/Slime 3/Slime3.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Materials/Slime 3/Slime3.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Models.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Models/Slimes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Models/Slimes/Slime_01.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Models/Slimes/Slime_01.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Models/Slimes/Slime_02.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Models/Slimes/Slime_02.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Models/Slimes/Slime_03.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Models/Slimes/Slime_03.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Models/Top.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Models/Top/Crown.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Models/Top/Crown.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Models/Top/Leaf.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Models/Top/Leaf.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Models/Top/MetalHelmet.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Models/Top/MetalHelmet.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Models/Top/Sprout.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Models/Top/Sprout.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Models/Top/VikingHelmet.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Models/Top/VikingHelmet.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Prefabs/Slime_01.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Prefabs/Slime_01.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Prefabs/Slime_01_King.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Prefabs/Slime_01_King.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Prefabs/Slime_01_MeltalHelmet.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Prefabs/Slime_01_MeltalHelmet.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Prefabs/Slime_01_Viking.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Prefabs/Slime_01_Viking.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Prefabs/Slime_02.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Prefabs/Slime_02.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Prefabs/Slime_03 King.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Prefabs/Slime_03 King.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Prefabs/Slime_03 Leaf.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Prefabs/Slime_03 Leaf.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Prefabs/Slime_03 Sprout.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Prefabs/Slime_03 Sprout.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Prefabs/Slime_03.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Prefabs/Slime_03.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Readme.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Render Pipelines.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Render Pipelines/Built-in.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Render Pipelines/URP.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Scene Nav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Scene Nav/NavMesh.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Scene Nav/NavMesh.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Scripts/AI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Scripts/AI/DataFace.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Scripts/AI/DataFace.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Scripts/AI/EnemyAi.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Scripts/AI/EnemyAi.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Scripts/AI/Face.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Scripts/AI/Face.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Shader/Unity-chan Shader Ver 1.2.1.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Shader/Unity-chan Shader Ver 1.2.1/CharaMain.cg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Shader/Unity-chan Shader Ver 1.2.1/CharaMain.cg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Shader/Unity-chan Shader Ver 1.2.1/CharaOutline.cg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Shader/Unity-chan Shader Ver 1.2.1/CharaOutline.cg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Shader/Unity-chan Shader Ver 1.2.1/CharaSkin.cg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Shader/Unity-chan Shader Ver 1.2.1/CharaSkin.cg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Shader/Unity-chan Shader Ver 1.2.1/Unitychan_chara_eye.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Shader/Unity-chan Shader Ver 1.2.1/Unitychan_chara_eye.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Shader/Unity-chan Shader Ver 1.2.1/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Shader/Unity-chan Shader Ver 1.2.1/readme.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Textures/Face.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Textures/Face/Face_00.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Textures/Face/Face_00.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Textures/Face/Face_01.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Textures/Face/Face_01.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Textures/Face/Face_02.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Textures/Face/Face_02.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Textures/Face/Face_03.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Textures/Face/Face_03.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Textures/Face/Face_04.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Textures/Face/Face_04.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Textures/Grid.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Textures/Grid.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Textures/Light.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Textures/Light/Falloff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Textures/Light/Falloff.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Textures/Light/RimLight.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Textures/Light/RimLight.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Textures/ProtectiveHat.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Textures/ProtectiveHat.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Textures/Slime_02.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Textures/Slime_02.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Textures/Slime_03.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Kawaii Slimes/Textures/Slime_03.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Materials/PP_Ground.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Materials/PP_Ground.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Materials/PP_Standard_Material.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Materials/PP_Standard_Material.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Birch_Tree_05.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Birch_Tree_05.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Birch_Tree_06.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Birch_Tree_06.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Daffodil_03.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Daffodil_03.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Forest_Mountain_Moss_01.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Forest_Mountain_Moss_01.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Forest_Mountain_Moss_02.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Forest_Mountain_Moss_02.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Grass_11.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Grass_11.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Grass_15.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Grass_15.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Hyacinth_04.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Hyacinth_04.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Lake_Ground_04.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Lake_Ground_04.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Meadow_07.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Meadow_07.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Meadow_08.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Meadow_08.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Meadow_Path_05.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Meadow_Path_05.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Mushroom_Fantasy_Orange_09.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Mushroom_Fantasy_Orange_09.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Mushroom_Fantasy_Orange_10.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Mushroom_Fantasy_Orange_10.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Mushroom_Fantasy_Purple_05.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Mushroom_Fantasy_Purple_05.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Mushroom_Fantasy_Purple_08.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Mushroom_Fantasy_Purple_08.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Rock_Moss_Grown_09.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Rock_Moss_Grown_09.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Rock_Moss_Grown_11.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Rock_Moss_Grown_11.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Rock_Pile_Forest_Moss_05.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Rock_Pile_Forest_Moss_05.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Rock_Pile_Forest_Moss_10.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Rock_Pile_Forest_Moss_10.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Sunflower_04.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Sunflower_04.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Tree_02.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Tree_02.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Tree_10.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Meshes/PP_Tree_10.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Birch_Tree_05.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Birch_Tree_05.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Birch_Tree_06.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Birch_Tree_06.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Daffodil_03.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Daffodil_03.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Forest_Mountain_Moss_01.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Forest_Mountain_Moss_01.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Forest_Mountain_Moss_02.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Forest_Mountain_Moss_02.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Grass_11.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Grass_11.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Grass_15.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Grass_15.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Hyacinth_04.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Hyacinth_04.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Lake_Ground_04.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Lake_Ground_04.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Meadow_07.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Meadow_07.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Meadow_08.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Meadow_08.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Meadow_Path_05.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Meadow_Path_05.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Mushroom_Fantasy_Orange_09.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Mushroom_Fantasy_Orange_09.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Mushroom_Fantasy_Orange_10.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Mushroom_Fantasy_Orange_10.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Mushroom_Fantasy_Purple_05.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Mushroom_Fantasy_Purple_05.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Mushroom_Fantasy_Purple_08.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Mushroom_Fantasy_Purple_08.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Rock_Moss_Grown_09.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Rock_Moss_Grown_09.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Rock_Moss_Grown_11.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Rock_Moss_Grown_11.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Rock_Pile_Forest_Moss_05.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Rock_Pile_Forest_Moss_05.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Rock_Pile_Forest_Moss_10.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Rock_Pile_Forest_Moss_10.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Sunflower_04.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Sunflower_04.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Tree_02.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Tree_02.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Tree_10.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Prefabs/PP_Tree_10.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Read Me.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Read Me.pdf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Scenes/Demo_01.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Scenes/Demo_01.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Scenes/Demo_List.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Scenes/Demo_List.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Textures/PP_Color_Palette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Pure Poly/Free Low Poly Nature Pack/Textures/PP_Color_Palette.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/Slime.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/Slime/Attack01_Slime_Anim.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/Slime/Attack01_Slime_Anim.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/Slime/Attack02_Slime_Anim.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/Slime/Attack02_Slime_Anim.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/Slime/Die_Slime_Anim.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/Slime/Die_Slime_Anim.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/Slime/Dizzy_Slime_Anim.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/Slime/Dizzy_Slime_Anim.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/Slime/GetHit_Slime_Anim.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/Slime/GetHit_Slime_Anim.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/Slime/IdleBattle_Slime_Anim.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/Slime/IdleBattle_Slime_Anim.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/Slime/IdleNormal_Slime_Anim.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/Slime/IdleNormal_Slime_Anim.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/Slime/Run_Slime_Anim.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/Slime/Run_Slime_Anim.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/Slime/SenseSomethingRoutine_Slime_Anim.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/Slime/SenseSomethingRoutine_Slime_Anim.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/Slime/SenseSomethingStart_Slime_Anim.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/Slime/SenseSomethingStart_Slime_Anim.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/Slime/Taunt_Slime_Anim.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/Slime/Taunt_Slime_Anim.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/Slime/Victory_Slime_Anim.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/Slime/Victory_Slime_Anim.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/Slime/WalkBack_Slime_Anim.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/Slime/WalkBack_Slime_Anim.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/Slime/WalkLeft_Slime_Anim.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/Slime/WalkLeft_Slime_Anim.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/Slime/WalkRight_Slime_Anim.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/Slime/WalkRight_Slime_Anim.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/Slime/Walk_Slime_Anim.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/Slime/Walk_Slime_Anim.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/TurtleShell.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/TurtleShell/Attack01_TurtleShell_Anim.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/TurtleShell/Attack01_TurtleShell_Anim.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/TurtleShell/Attack02_TurtleShell_Anim.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/TurtleShell/Attack02_TurtleShell_Anim.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/TurtleShell/DefendHit_TurtleShell_Anim.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/TurtleShell/DefendHit_TurtleShell_Anim.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/TurtleShell/Defend_TurtleShell_Anim.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/TurtleShell/Defend_TurtleShell_Anim.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/TurtleShell/Die_TurtleShell_Anim.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/TurtleShell/Die_TurtleShell_Anim.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/TurtleShell/Dizzy_TurtleShell_Anim.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/TurtleShell/Dizzy_TurtleShell_Anim.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/TurtleShell/GetHit_TurtleShell_Anim.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/TurtleShell/GetHit_TurtleShell_Anim.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/TurtleShell/IdleBattle_TurtleShell_Anim.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/TurtleShell/IdleBattle_TurtleShell_Anim.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/TurtleShell/IdleNormal_TurtleShell_Anim.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/TurtleShell/IdleNormal_TurtleShell_Anim.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/TurtleShell/Run_TurtleShell_Anim.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/TurtleShell/Run_TurtleShell_Anim.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/TurtleShell/SenseSomethingRT_TurtleShell_Anim.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/TurtleShell/SenseSomethingRT_TurtleShell_Anim.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/TurtleShell/SenseSomethingStart_TurtleShell_Anim.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/TurtleShell/SenseSomethingStart_TurtleShell_Anim.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/TurtleShell/Taunt_TurtleShell_Anim.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/TurtleShell/Taunt_TurtleShell_Anim.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/TurtleShell/Victory_TurtleShell_Anim.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/TurtleShell/Victory_TurtleShell_Anim.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/TurtleShell/WalkBack_TurtleShell_Anim.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/TurtleShell/WalkBack_TurtleShell_Anim.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/TurtleShell/WalkLeft_TurtleShell_Anim.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/TurtleShell/WalkLeft_TurtleShell_Anim.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/TurtleShell/WalkRight_TurtleShell_Anim.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/TurtleShell/WalkRight_TurtleShell_Anim.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/TurtleShell/Walk_TurtleShell_Anim.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animations/TurtleShell/Walk_TurtleShell_Anim.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animators.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animators/Slime.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animators/Slime.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animators/TurtleShell.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Animators/TurtleShell.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Materials/PolyartDefault.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Materials/PolyartDefault.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Materials/Skybox_Mat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Materials/Skybox_Mat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Materials/SlimePBR.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Materials/SlimePBR.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Materials/Stage.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Materials/Stage.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Materials/TurtleShellPBR.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Materials/TurtleShellPBR.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Meshes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Meshes/SlimeMesh.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Meshes/SlimeMesh.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Meshes/SlimeMeshPBR.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Meshes/SlimeMeshPBR.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Meshes/StageMesh.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Meshes/StageMesh.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Meshes/TurtleShellMesh.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Meshes/TurtleShellMesh.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Meshes/TurtleShellMeshPBR.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Meshes/TurtleShellMeshPBR.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Prefabs/Slime.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Prefabs/Slime.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Prefabs/SlimePBR.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Prefabs/SlimePBR.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Prefabs/TurtleShell.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Prefabs/TurtleShell.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Prefabs/TurtleShellPBR.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Prefabs/TurtleShellPBR.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Promotion.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Promotion.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Scenes/DuoScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Scenes/DuoScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Scenes/DuoSceneSettings.lighting" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Scenes/DuoSceneSettings.lighting.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Textures/PBRSlimeAO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Textures/PBRSlimeAO.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Textures/PBRSlimeAlbedo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Textures/PBRSlimeAlbedo.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Textures/PBRSlimeMetallicSmoothness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Textures/PBRSlimeMetallicSmoothness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Textures/PBRSlimeNormal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Textures/PBRSlimeNormal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Textures/PBRTurtleShellAO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Textures/PBRTurtleShellAO.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Textures/PBRTurtleShellAlbedo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Textures/PBRTurtleShellAlbedo.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Textures/PBRTurtleShellMetalicSmoothness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Textures/PBRTurtleShellMetalicSmoothness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Textures/PBRTurtleShellNormal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Textures/PBRTurtleShellNormal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Textures/PolyartDefaultTex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RPG Monster Duo PBR Polyart/Textures/PolyartDefaultTex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RootVegetables.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RootVegetables/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RootVegetables/Materials/RootVegetables.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RootVegetables/Materials/RootVegetables.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RootVegetables/Models.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RootVegetables/Models/Beet.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RootVegetables/Models/Beet.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RootVegetables/Models/Daikon.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RootVegetables/Models/Daikon.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RootVegetables/Models/Parsnip.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RootVegetables/Models/Parsnip.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RootVegetables/Models/Radish.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RootVegetables/Models/Radish.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RootVegetables/Models/RadishAlt.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RootVegetables/Models/RadishAlt.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RootVegetables/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RootVegetables/Prefabs/Beet.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RootVegetables/Prefabs/Beet.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RootVegetables/Prefabs/Daikon.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RootVegetables/Prefabs/Daikon.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RootVegetables/Prefabs/Parsnip.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RootVegetables/Prefabs/Parsnip.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RootVegetables/Prefabs/Radish.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RootVegetables/Prefabs/Radish.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RootVegetables/Prefabs/RadishAlt.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RootVegetables/Prefabs/RadishAlt.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RootVegetables/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RootVegetables/Scenes/Demo.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RootVegetables/Scenes/Demo.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RootVegetables/Scenes/DemoSettings.lighting" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RootVegetables/Scenes/DemoSettings.lighting.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RootVegetables/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RootVegetables/Scripts/Rotate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RootVegetables/Scripts/Rotate.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RootVegetables/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RootVegetables/Textures/RootVegetables.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/RootVegetables/Textures/RootVegetables.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Materials/SimpleNaturePack_BG.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Materials/SimpleNaturePack_BG.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Materials/SimpleNaturePack_Texture_01.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Materials/SimpleNaturePack_Texture_01.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Branch_01.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Branch_01.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Bush_01.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Bush_01.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Bush_02.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Bush_02.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Bush_03.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Bush_03.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Flowers_01.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Flowers_01.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Flowers_02.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Flowers_02.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Grass_01.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Grass_01.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Grass_02.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Grass_02.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Ground_01.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Ground_01.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Ground_02.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Ground_02.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Ground_03.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Ground_03.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Mushroom_01.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Mushroom_01.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Mushroom_02.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Mushroom_02.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Rock_01.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Rock_01.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Rock_02.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Rock_02.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Rock_03.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Rock_03.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Rock_04.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Rock_04.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Rock_05.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Rock_05.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Stump_01.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Stump_01.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Tree_01.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Tree_01.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Tree_02.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Tree_02.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Tree_03.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Tree_03.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Tree_04.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Tree_04.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Tree_05.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Models/Tree_05.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Branch_01.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Branch_01.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Bush_01.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Bush_01.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Bush_02.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Bush_02.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Bush_03.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Bush_03.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Flowers_01.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Flowers_01.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Flowers_02.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Flowers_02.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Grass_01.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Grass_01.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Grass_02.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Grass_02.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Ground_01.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Ground_01.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Ground_02.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Ground_02.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Ground_03.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Ground_03.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Mushroom_01.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Mushroom_01.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Mushroom_02.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Mushroom_02.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Rock_01.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Rock_01.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Rock_02.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Rock_02.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Rock_03.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Rock_03.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Rock_04.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Rock_04.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Rock_05.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Rock_05.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Stump_01.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Stump_01.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Tree_01.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Tree_01.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Tree_02.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Tree_02.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Tree_03.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Tree_03.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Tree_04.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Tree_04.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Tree_05.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Prefabs/Tree_05.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Scenes/SimpleNaturePack_Demo.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Scenes/SimpleNaturePack_Demo.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Scenes/SimpleNaturePack_DemoSettings.lighting" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Scenes/SimpleNaturePack_DemoSettings.lighting.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Scenes/SimpleNaturePack_Overview.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Scenes/SimpleNaturePack_Overview.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Scenes/SimpleNaturePack_OverviewSettings.lighting" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Scenes/SimpleNaturePack_OverviewSettings.lighting.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/SimpleNaturePack_2020.3_HDRP_v1.24.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/SimpleNaturePack_2020.3_URP_v1.24.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Textures/NaturePackLite_Texture_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/SimpleNaturePack/Textures/NaturePackLite_Texture_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/totoList.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/totoList.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/발표용 한글.hwp" beforeDir="false" afterPath="$PROJECT_DIR$/발표용 한글.hwp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,44 +671,47 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Burst.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AnimatorID.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Border.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CreatePet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Boss/BossKing.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMove.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Spawn.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Item.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Item/Weapon.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/SoundManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Pet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TakeDamage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TextMeshProUGUI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/17484a9af6b944dea5cd9be4dbb0da2c171c00/43/06221267/Camera.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d04e01f61b5641678dd1b35b66008be97c00/8a/7fa1a521/Input.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2SWFmd0YsUKO7OtqEbUq4R5roSR" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\curry\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\curry\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\curry\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\curry\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\curry\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\curry\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="zz" />
@@ -117,6 +766,7 @@
       <workItem from="1689254596176" duration="7626000" />
       <workItem from="1689331714641" duration="21369000" />
       <workItem from="1689389257329" duration="21363000" />
+      <workItem from="1689483907009" duration="34634000" />
     </task>
     <servers />
   </component>
@@ -127,6 +777,25 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Item/Item.cs</url>
+          <line>19</line>
+          <properties documentPath="C:\GitHub\Unity\Chung\Assets\Scripts\Item\Item.cs" initialLine="19" containingFunctionPresentation="메서드 'Awake'">
+            <startOffsets>
+              <option value="316" />
+            </startOffsets>
+            <endOffsets>
+              <option value="317" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
