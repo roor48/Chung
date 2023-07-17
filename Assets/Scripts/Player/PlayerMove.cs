@@ -11,7 +11,7 @@ public class PlayerMove : MonoBehaviour
     private Rigidbody rigid;
     private Animator anim;
     private AudioSource audioSource;
-    private TakeDamage takeDamage;
+    public TakeDamage takeDamage;
     
     [Header("Manager")]
     public UIManager uiManager;
@@ -34,7 +34,7 @@ public class PlayerMove : MonoBehaviour
 
     [Header("Shoot")]
     public Material[] bulletMat;
-    private string bulletName;
+    public string bulletName;
     public float bulletSpd;
     public float shootDelay;
     private float curDelay;
@@ -88,7 +88,6 @@ public class PlayerMove : MonoBehaviour
         LimitMove();
         Shoot();
 
-        PlayerStats.Instance.curBurstGauge = curBurstGauge;
     }
 
     #region Cheat
@@ -253,13 +252,11 @@ public class PlayerMove : MonoBehaviour
                 GameManager.Instance.Score += 500;
             }
 
-            PlayerStats.Instance.power = curPower;
             return;
         }
 
         curPower = 0;
         bulletName = _bulletName;
-        PlayerStats.Instance.weaponName = bulletName;
     }
     #endregion
 
@@ -285,7 +282,6 @@ public class PlayerMove : MonoBehaviour
             nextExp *= 2;
         }
 
-        PlayerStats.Instance.exp = exp;
     }
 
     private readonly int levelUp = Animator.StringToHash("LevelUp");
@@ -299,10 +295,7 @@ public class PlayerMove : MonoBehaviour
             takeDamage.health = takeDamage.maxHealth;
         atkBonus += 1;
 
-        PlayerStats.Instance.nextExp = nextExp;
-        PlayerStats.Instance.level = level;
-        PlayerStats.Instance.atkBonus = atkBonus;
-        PlayerStats.Instance.maxHealth = takeDamage.maxHealth;
+
     }
     #endregion
 

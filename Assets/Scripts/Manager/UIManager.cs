@@ -118,6 +118,17 @@ public class UIManager : MonoBehaviour
 
     public void GoNextScene(string sceneName)
     {
+        PlayerStats.Instance.nextExp = PlayerMove.Instance.nextExp;
+        PlayerStats.Instance.level = PlayerMove.Instance.level;
+        PlayerStats.Instance.atkBonus = PlayerMove.Instance.atkBonus;
+        PlayerStats.Instance.maxHealth = PlayerMove.Instance.takeDamage.maxHealth;
+        PlayerStats.Instance.weaponName = PlayerMove.Instance.bulletName;
+        PlayerStats.Instance.power = PlayerMove.Instance.curPower;
+        PlayerStats.Instance.curBurstGauge = PlayerMove.Instance.curBurstGauge;
+        PlayerStats.Instance.exp = PlayerMove.Instance.exp;
+        PlayerStats.Instance.petCnt = PlayerMove.Instance.createPet.petIndex;
+
+
         SceneManager.LoadScene(sceneName);
     }
 }

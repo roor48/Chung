@@ -11844,6 +11844,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63a88ad7e73ab1c499717daf4e920ada, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sumTime: 0
+  sumTakenDmg: 0
+  sumGivenDmg: 0
+  sumScore: 0
   isCleared: 0
 --- !u!1001 &1435035685
 PrefabInstance:
@@ -14393,6 +14397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ced54d86fd567ce4ca6a68ef8d39b32c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  takeDamage: {fileID: 0}
   uiManager: {fileID: 1372230608}
   audios:
   - {fileID: 8300000, guid: 81652031b64c342cc8dbc59c138d77c5, type: 3}
@@ -14409,6 +14414,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: d9d1591d3257c694681122caa07beccb, type: 2}
   - {fileID: 2100000, guid: 73d1a8b11ebac5349950be09c8320a11, type: 2}
   - {fileID: 2100000, guid: 80d8dc1d7a9739b48b9696f27cf1895b, type: 2}
+  bulletName: 
   bulletSpd: 10
   shootDelay: 0.5
   curPower: 0
@@ -15837,7 +15843,7 @@ MonoBehaviour:
   xp: 0
   noDamage: 0
   disableOnDie: 0
-  isTurtle: 0
+  isTurtle: 1
 --- !u!54 &1715029192
 Rigidbody:
   m_ObjectHideFlags: 0

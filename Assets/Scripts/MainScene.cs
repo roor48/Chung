@@ -12,6 +12,11 @@ public class MainScene : MonoBehaviour
     private void Awake()
     {
         Time.timeScale = 1f;
+        if (PlayerStats.Instance)
+        {
+            Destroy(PlayerStats.Instance.gameObject);
+            Destroy(GameManager.Instance.gameObject);
+        }
     }
 
     public void GoPlayScene()
