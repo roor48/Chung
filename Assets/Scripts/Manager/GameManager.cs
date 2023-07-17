@@ -18,6 +18,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public float sumTime;
+    public int sumTakenDmg;
+    public int sumGivenDmg;
+    public int sumScore;
     // public string bulletName;
     public float Timer { get; private set; }
     public int Score { get; set; }
@@ -46,6 +50,11 @@ public class GameManager : MonoBehaviour
     // 체인을 걸어서 이 함수는 매 씬마다 호출된다.
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        sumTime += Timer;
+        sumTakenDmg += TakenDmg;
+        sumGivenDmg += GivenDmg;
+        sumScore += Score;
+        
         TakenDmg = 0;
         GivenDmg = 0;
         Timer = 0;

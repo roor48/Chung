@@ -7,6 +7,7 @@ public class TakeDamage : MonoBehaviour
     public int xp;
     public bool noDamage;
     public bool disableOnDie;
+    public bool isTurtle;
 
     private Rigidbody rigid;
     private Animator anim;
@@ -39,11 +40,12 @@ public class TakeDamage : MonoBehaviour
         if (bulletScript.curThroughCnt-- <= 0)
             other.gameObject.SetActive(false);
         
-        if (anim.GetBool(defend))
-        {
-            anim.SetTrigger(defendGetHit);
-            return;
-        }
+        if (isTurtle)
+            if (anim.GetBool(defend))
+            {
+                anim.SetTrigger(defendGetHit);
+                return;
+            }
         GetDamage(bulletScript.dmg);
     }
 

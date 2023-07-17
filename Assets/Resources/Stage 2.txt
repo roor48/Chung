@@ -1,4 +1,19 @@
 // Enemy_Cactus, Enemy_Burrow, Enemy_Fiery, Boss
 // Delay, Name, Point(1~7)(MIDDLE IS 4)
 2,Enemy_Cactus,4
-3,Enemy_Fiery,4
+2,Enemy_Cactus,1
+2,Enemy_Cactus,2
+0,Enemy_Cactus,6
+0,Enemy_Cactus,4
+3,Enemy_Burrow,3
+1,Enemy_Cactus,7
+2,Enemy_Fiery,4
+0.5,Enemy_Cactus,3
+0,Enemy_Cactus,5
+4,Enemy_Cactus,2
+0,Enemy_Cactus,6
+0.5,Enemy_Cactus,1
+0,Enemy_Cactus,3
+0,Enemy_Cactus,5
+0,Enemy_Cactus,7
+5,Boss,4

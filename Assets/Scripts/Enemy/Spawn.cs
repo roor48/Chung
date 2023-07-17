@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-using Unity.VisualScripting;
 using Random = UnityEngine.Random;
 
 public class Spawn : MonoBehaviour
@@ -12,7 +11,8 @@ public class Spawn : MonoBehaviour
     
     private Transform[] points;
     public GameObject bossObject;
-
+    public string[] enemyNames;
+    
     public float spawnDelay;
     private float curDelay;
 
@@ -110,7 +110,6 @@ public class Spawn : MonoBehaviour
         } while (spawnDelay == 0);
     }
 
-    private readonly string[] enemyNames = {"Enemy_Cactus", "Enemy_Fiery"};
     private void RandomSpawn()
     {
         if (curDelay < spawnDelay)

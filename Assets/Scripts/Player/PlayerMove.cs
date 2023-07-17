@@ -1,6 +1,8 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -56,6 +58,18 @@ public class PlayerMove : MonoBehaviour
         Instance = this;
         speed = stdSpeed;
         bulletName = "Bullet_Player_Sphere";
+        takeDamage.maxHealth = PlayerStats.Instance.maxHealth;
+        level = PlayerStats.Instance.level;
+        bulletName = PlayerStats.Instance.weaponName;
+        curPower = PlayerStats.Instance.power;
+        nextExp = PlayerStats.Instance.nextExp;
+        exp = PlayerStats.Instance.exp;
+        atkBonus = PlayerStats.Instance.atkBonus;
+        curBurstGauge = PlayerStats.Instance.curBurstGauge;
+
+        int pets = PlayerStats.Instance.petCnt;
+        for (int i = 0; i < pets; i++)
+            createPet.MakePet();
     }
 
     private void Update()
@@ -74,6 +88,7 @@ public class PlayerMove : MonoBehaviour
         LimitMove();
         Shoot();
 
+        PlayerStats.Instance.curBurstGauge = curBurstGauge;
     }
 
     #region Cheat
@@ -237,11 +252,14 @@ public class PlayerMove : MonoBehaviour
                 curPower = 2;
                 GameManager.Instance.Score += 500;
             }
+
+            PlayerStats.Instance.power = curPower;
             return;
         }
 
         curPower = 0;
         bulletName = _bulletName;
+        PlayerStats.Instance.weaponName = bulletName;
     }
     #endregion
 
@@ -266,6 +284,8 @@ public class PlayerMove : MonoBehaviour
             exp %= nextExp;
             nextExp *= 2;
         }
+
+        PlayerStats.Instance.exp = exp;
     }
 
     private readonly int levelUp = Animator.StringToHash("LevelUp");
@@ -278,6 +298,11 @@ public class PlayerMove : MonoBehaviour
         if (takeDamage.health > takeDamage.maxHealth)
             takeDamage.health = takeDamage.maxHealth;
         atkBonus += 1;
+
+        PlayerStats.Instance.nextExp = nextExp;
+        PlayerStats.Instance.level = level;
+        PlayerStats.Instance.atkBonus = atkBonus;
+        PlayerStats.Instance.maxHealth = takeDamage.maxHealth;
     }
     #endregion
 

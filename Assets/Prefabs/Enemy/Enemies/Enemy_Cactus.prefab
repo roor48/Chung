@@ -191,6 +191,7 @@ MonoBehaviour:
   health: 0
   xp: 4
   noDamage: 0
+  disableOnDie: 0
 --- !u!114 &547661613589723698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,7 +208,7 @@ MonoBehaviour:
   bulletName: Bullet_Cactus
   speed: 4
   bulletSpd: 7
-  delay: 2
+  delay: 6
   burstValue: 3.5
 --- !u!1 &1818131163193051527
 GameObject:

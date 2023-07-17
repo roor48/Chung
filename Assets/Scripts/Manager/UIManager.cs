@@ -30,6 +30,8 @@ public class UIManager : MonoBehaviour
     public GameObject clearPanel;
     public TMP_Text panelScore;
     public TMP_Text panelTime;
+    public TMP_Text clearGivenDmg;
+    public TMP_Text clearTakenDmg;
 
     [Header("Cheat UI")]
     public GameObject cheatPanel;
@@ -57,6 +59,8 @@ public class UIManager : MonoBehaviour
 
         panelScore.text = $"점수 : {GameManager.Instance.Score:#,##0}";
         panelTime.text = $"걸린 시간 : {time / 60:D2}분 {time % 60:D2}초";
+        clearGivenDmg.text = $"가한 피해량 : {GameManager.Instance.GivenDmg:#,##0}";
+        clearTakenDmg.text = $"받은 피해량 : {GameManager.Instance.TakenDmg:#,##0}";
 
         burstSlider.value = 1 - PlayerMove.Instance.curBurstGauge / PlayerMove.Instance.burstGauge;
         expSlider.value = (float)PlayerMove.Instance.exp / PlayerMove.Instance.nextExp;
@@ -102,7 +106,6 @@ public class UIManager : MonoBehaviour
         clearPanel.SetActive(true);
         GameManager.Instance.SetCleared(true);
     }
-
 
     public void GoMainMenu()
     {
