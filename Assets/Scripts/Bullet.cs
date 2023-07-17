@@ -41,7 +41,9 @@ public class Bullet : MonoBehaviour
     private void Update()
     {
         if (GameManager.Instance.MainCam.WorldToViewportPoint(transform.position).x > 1.5f ||
-            GameManager.Instance.MainCam.WorldToViewportPoint(transform.position).x < -0.5f)
+            GameManager.Instance.MainCam.WorldToViewportPoint(transform.position).x < -0.5f ||
+            GameManager.Instance.MainCam.WorldToViewportPoint(transform.position).y > 1.5f ||
+            GameManager.Instance.MainCam.WorldToViewportPoint(transform.position).y < -0.5f)
         {
             gameObject.SetActive(false);
         }

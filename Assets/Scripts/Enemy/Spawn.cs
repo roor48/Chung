@@ -20,13 +20,16 @@ public class Spawn : MonoBehaviour
     public int spawnIndex;
     public bool spawnEnd;
     private bool firstEnd;
+
     private void Awake()
     {
         points = GetComponentsInChildren<Transform>();
         spawnList = new();
         ReadSpawnFile();
     }
+    
 
+    
     private void ReadSpawnFile()
     {
         // 변수 초기화
@@ -107,7 +110,7 @@ public class Spawn : MonoBehaviour
         } while (spawnDelay == 0);
     }
 
-    private readonly string[] enemyNames = {"Enemy_Normal", "Enemy_MetalHelmet", "Enemy_Rabbit"};
+    private readonly string[] enemyNames = {"Enemy_Cactus", "Enemy_Fiery"};
     private void RandomSpawn()
     {
         if (curDelay < spawnDelay)
@@ -118,7 +121,7 @@ public class Spawn : MonoBehaviour
         curDelay = 0;
         spawnDelay = Random.Range(3, 7);
 
-        GameObject enemy = PoolManager.Instance.GetPool(enemyNames[Random.Range(0, 3)]);
+        GameObject enemy = PoolManager.Instance.GetPool(enemyNames[Random.Range(0, enemyNames.Length)]);
         enemy.transform.position = points[Random.Range(1, 8)].position;
     }
 }

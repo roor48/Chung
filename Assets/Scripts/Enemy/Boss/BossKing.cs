@@ -64,9 +64,15 @@ public class BossKing : MonoBehaviour
         StartCoroutine(Think());
     }
 
-    private void JumpPattern() // 애니메이션
+    private void JumpSound()
     {
         audioSource.clip = audios[0];
+        audioSource.Play();
+    }
+    
+    private void JumpPattern() // 애니메이션
+    {
+        audioSource.clip = audios[1];
         audioSource.Play();
 
         int ranBullet = Random.Range(0,2);

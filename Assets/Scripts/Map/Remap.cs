@@ -13,6 +13,7 @@ public class Remap : MonoBehaviour
     public Type type;
     public Transform target;
 
+    public Vector3 pos;
     public float speed;
     public bool stopReturn;
 
@@ -32,7 +33,7 @@ public class Remap : MonoBehaviour
             switch (type)
             {
                 case Type.Straight:
-                    transform.position = new Vector3(target.position.x + 20, -1.92f, -1.43f);
+                    transform.position = new Vector3(target.position.x + pos.x, pos.y, pos.z); // new Vector3(target.position.x + 20, -1.92f, -1.43f);
                     break;
                 case Type.Corner:
                     break;

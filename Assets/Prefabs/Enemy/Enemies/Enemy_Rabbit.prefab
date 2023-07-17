@@ -262,7 +262,6 @@ GameObject:
   - component: {fileID: 5746780852529645537}
   - component: {fileID: -414240085773092293}
   - component: {fileID: 5453095332971990337}
-  - component: {fileID: 4186945310062284614}
   - component: {fileID: 978098425221821209}
   m_Layer: 6
   m_Name: Enemy_Rabbit
@@ -373,19 +372,6 @@ MonoBehaviour:
   health: 30
   xp: 4
   noDamage: 0
---- !u!114 &4186945310062284614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6139531486156551783}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7591feb51c1e7f4589cd97ed62876aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 4
 --- !u!114 &978098425221821209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -400,6 +386,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyList: 2
   bulletName: Bullet_Carrot
+  speed: 4
   bulletSpd: 10
   delay: 5
   burstValue: 3.5

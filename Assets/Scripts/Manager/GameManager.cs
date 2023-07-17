@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
     // public string bulletName;
     public float Timer { get; private set; }
     public int Score { get; set; }
+    public int TakenDmg { get; set; }
+    public int GivenDmg { get; set; }
 
     public bool isCleared = false;
 
@@ -44,6 +46,8 @@ public class GameManager : MonoBehaviour
     // 체인을 걸어서 이 함수는 매 씬마다 호출된다.
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        TakenDmg = 0;
+        GivenDmg = 0;
         Timer = 0;
         Score = 0;
         SetCleared(false);

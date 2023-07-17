@@ -7,11 +7,19 @@ using UnityEngine.Audio;
 
 public class SoundManager : MonoBehaviour
 {
+    public static SoundManager Instance { get; private set; }
+    
     public AudioMixer masterMixer;
+    public AudioSource dieSound;
     
     public Slider masterSlider;
     public Slider bgmSlider;
     public Slider sfxSlider;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Start()
     {

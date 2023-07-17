@@ -69,9 +69,12 @@ public class UIManager : MonoBehaviour
     public void OnDie()
     {
         goPanel.SetActive(true);
-        gameOverTimeText.text = $"살아남은 시간 : 00분 00초";
-        givenDmgText.text = $"가한 데미지 : 123,445";
-        takenDmgText.text = $"받은 데미지 : 123,445";
+        
+        int time = (int)GameManager.Instance.Timer;
+        
+        gameOverTimeText.text = $"살아남은 시간 : {time / 60:D2}분 {time % 60:D2}초";
+        givenDmgText.text = $"가한 데미지 : {GameManager.Instance.GivenDmg:#,##0}";
+        takenDmgText.text = $"받은 데미지 : {GameManager.Instance.TakenDmg:#,##0}";
         gameOverLevelText.text = $"현재 레벨 : {PlayerMove.Instance.level}Lv.";
     }
 

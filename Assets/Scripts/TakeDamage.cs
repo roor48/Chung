@@ -6,12 +6,16 @@ public class TakeDamage : MonoBehaviour
     public int health;
     public int xp;
     public bool noDamage;
+    public bool disableOnDie;
 
+    private Rigidbody rigid;
     private Animator anim;
+    private AudioSource audioSource;
     private bool isDead;
 
     private void Awake()
     {
+        rigid = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
     }
 
@@ -21,6 +25,8 @@ public class TakeDamage : MonoBehaviour
         isDead = false;
     }
 
+    private readonly int defend = Animator.StringToHash("Defend");
+    private readonly int defendGetHit = Animator.StringToHash("DefendGetHit");
     private void OnTriggerEnter(Collider other)
     {
         if (!other.CompareTag("Bullet") || GameManager.Instance.isCleared || isDead || noDamage)
@@ -29,19 +35,36 @@ public class TakeDamage : MonoBehaviour
         Bullet bulletScript = other.GetComponent<Bullet>();
         if (bulletScript == null)
             return;
-        
-        GetDamage(bulletScript.dmg);
+
         if (bulletScript.curThroughCnt-- <= 0)
             other.gameObject.SetActive(false);
+        
+        if (anim.GetBool(defend))
+        {
+            anim.SetTrigger(defendGetHit);
+            return;
+        }
+        GetDamage(bulletScript.dmg);
     }
 
     public void GetDamage(int dmg)
     {
         health -= dmg;
+        if (CompareTag("Player"))
+            GameManager.Instance.TakenDmg += dmg;
+        else if (CompareTag("Enemy") || CompareTag("Boss"))
+            GameManager.Instance.GivenDmg += dmg;
+
         if (health <= 0)
         {
             health = 0;
             isDead = true;
+            rigid.velocity = Vector3.zero;
+            if (disableOnDie)
+            {
+                gameObject.SetActive(false);
+                return;
+            }
             if (!gameObject.CompareTag("Player")) // 플레이어가 아니면 점수 추가 및 경험치 획득
             {
                 GameManager.Instance.Score += maxHealth;
@@ -50,7 +73,10 @@ public class TakeDamage : MonoBehaviour
                 if (gameObject.CompareTag("Enemy"))
                     CreateItem();
                 else if (gameObject.CompareTag("Boss"))
+                {
+                    Debug.Log("Boss Dead!");
                     PoolManager.Instance.DamageEnemy(true);
+                }
             }
             else
             {
