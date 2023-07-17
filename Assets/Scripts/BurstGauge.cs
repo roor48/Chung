@@ -23,6 +23,8 @@ public class BurstGauge : MonoBehaviour
         Vector3 dirVec = playerTrans.position - transform.position;
         dirVec.y = 0;
         rigid.velocity = dirVec.normalized * speed++;
+        if (speed > 50)
+            speed = 50;
     }
 
     private void OnTriggerEnter(Collider other)

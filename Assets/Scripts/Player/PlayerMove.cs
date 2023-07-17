@@ -283,7 +283,7 @@ public class PlayerMove : MonoBehaviour
 
     public void OnDie()
     {
-        uiManager.goPanel.SetActive(true);
+        uiManager.OnDie();
         isDead = true;
     }
 }

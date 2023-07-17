@@ -23,15 +23,16 @@ public class TakeDamage : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Bullet") && !isDead && !noDamage)
-        {
-            Bullet bulletScript = other.GetComponent<Bullet>();
-            if (bulletScript == null)
-                return;
-            GetDamage(bulletScript.dmg);
-            if (bulletScript.curThroughCnt-- <= 0)
-                other.gameObject.SetActive(false);
-        }
+        if (!other.CompareTag("Bullet") || GameManager.Instance.isCleared || isDead || noDamage)
+            return;
+
+        Bullet bulletScript = other.GetComponent<Bullet>();
+        if (bulletScript == null)
+            return;
+        
+        GetDamage(bulletScript.dmg);
+        if (bulletScript.curThroughCnt-- <= 0)
+            other.gameObject.SetActive(false);
     }
 
     public void GetDamage(int dmg)

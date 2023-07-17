@@ -21,6 +21,10 @@ public class UIManager : MonoBehaviour
     
     [Header("GameOver UI")]
     public GameObject goPanel;
+    private Text gameOverTimeText;
+    private Text givenDmgText;
+    private Text takenDmgText;
+    private Text gameOverLevelText;
     
     [Header("ClearPanel UI")]
     public GameObject clearPanel;
@@ -31,12 +35,16 @@ public class UIManager : MonoBehaviour
     public GameObject cheatPanel;
     public TMP_Text cPText;
 
-    public PlayerMove player;
     public TakeDamage playerHealth;
 
     private void Awake()
     {
         stageStart.SetTrigger(AnimatorID.showText);
+
+        gameOverTimeText = goPanel.transform.GetChild(0).GetComponent<Text>();
+        givenDmgText = goPanel.transform.GetChild(1).GetComponent<Text>();
+        takenDmgText = goPanel.transform.GetChild(2).GetComponent<Text>();
+        gameOverLevelText = goPanel.transform.GetChild(3).GetComponent<Text>();
     }
 
     private void Update()
@@ -50,19 +58,27 @@ public class UIManager : MonoBehaviour
         panelScore.text = $"점수 : {GameManager.Instance.Score:#,##0}";
         panelTime.text = $"걸린 시간 : {time / 60:D2}분 {time % 60:D2}초";
 
-        burstSlider.value = 1 - player.curBurstGauge / player.burstGauge;
-        expSlider.value = (float)player.exp / player.nextExp;
+        burstSlider.value = 1 - PlayerMove.Instance.curBurstGauge / PlayerMove.Instance.burstGauge;
+        expSlider.value = (float)PlayerMove.Instance.exp / PlayerMove.Instance.nextExp;
     }
 
     public void SetBurstSlider(float value)
     {
         burstSlider.value = value;
     }
+    public void OnDie()
+    {
+        goPanel.SetActive(true);
+        gameOverTimeText.text = $"살아남은 시간 : 00분 00초";
+        givenDmgText.text = $"가한 데미지 : 123,445";
+        takenDmgText.text = $"받은 데미지 : 123,445";
+        gameOverLevelText.text = $"현재 레벨 : {PlayerMove.Instance.level}Lv.";
+    }
 
     public void ShowCheatPanel()
     {
         cheatPanel.SetActive(!cheatPanel.activeSelf);
-        cPText.text = $"현재 경험치 : {player.exp}\n\n현재 레벨 : {player.level}\n\n레벨 업까지 필요한 경험치 : {(player.nextExp - player.exp < 0 ? 0 : player.nextExp - player.exp)}";
+        cPText.text = $"현재 경험치 : {PlayerMove.Instance.exp}\n\n현재 레벨 : {PlayerMove.Instance.level}\n\n레벨 업까지 필요한 경험치 : {(PlayerMove.Instance.nextExp - PlayerMove.Instance.exp < 0 ? 0 : PlayerMove.Instance.nextExp - PlayerMove.Instance.exp)}";
         CancelInvoke(nameof(HideCheatPanel));
         if (cheatPanel.activeSelf)
             Invoke(nameof(HideCheatPanel), 5f);

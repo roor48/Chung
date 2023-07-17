@@ -5,8 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e34de0e-f3dd-4c4e-b133-97dea5675b16" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Chung/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Chung/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animator/BossTurtle.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animator/BossTurtle.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Stage 2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Stage 2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Burst.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Burst.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BurstGauge.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BurstGauge.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Boss/BossTurtle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Boss/BossTurtle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TakeDamage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TakeDamage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Imports/Graphics/RPG Monster Duo PBR Polyart/Animations/TurtleShell/DefendHit_TurtleShell_Anim.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Imports/Graphics/RPG Monster Duo PBR Polyart/Animations/TurtleShell/DefendHit_TurtleShell_Anim.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/totoList.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/totoList.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,6 +120,7 @@
       <workItem from="1689389257329" duration="21363000" />
       <workItem from="1689483907009" duration="34634000" />
       <workItem from="1689524786096" duration="860000" />
+      <workItem from="1689579384970" duration="4327000" />
     </task>
     <servers />
   </component>

@@ -1,18 +1,34 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BossTurtle : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Rigidbody rigid;
+    private TakeDamage takeDamage;
+    private Animator anim;
+    private AudioSource audioSource;
+
+    public AudioClip[] audios;
+    private void Awake()
     {
-        
+        rigid = GetComponent<Rigidbody>();
+        takeDamage = GetComponent<TakeDamage>();
+        anim = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-        
+        StartCoroutine(Move());
+    }
+
+    private IEnumerator Move()
+    {
+        rigid.AddForce(Vector3.left * 7, ForceMode.Impulse);
+        yield return new WaitForSeconds(1.5f);
+        rigid.velocity = Vector3.zero;
+        anim.SetTrigger("Idle");
     }
 }
