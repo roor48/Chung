@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -17,13 +18,29 @@ public class Shoot : MonoBehaviour
     public float delay;
     private float curDelay;
 
+    public float burstValue;
+
     private TakeDamage takeDamage;
     private Transform playerTrnas;
     
+    private bool isMaked;
     private void Awake()
     {
         takeDamage = GetComponent<TakeDamage>();
         playerTrnas = PlayerMove.Instance.transform;
+    }
+
+    private void OnDisable()
+    {
+        if (!isMaked || takeDamage.health > 0)
+        {
+            isMaked = true;
+            return;
+        }
+
+        GameObject bead = PoolManager.Instance.GetPool("BurstBead");
+        bead.GetComponent<BurstGauge>().burstValue = this.burstValue;
+        bead.transform.position = transform.position + Vector3.right * 6.5f;
     }
 
     private void Update()

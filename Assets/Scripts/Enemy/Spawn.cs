@@ -8,6 +8,8 @@ using Random = UnityEngine.Random;
 
 public class Spawn : MonoBehaviour
 {
+    public string fileName;
+    
     private Transform[] points;
     public GameObject bossObject;
 
@@ -33,7 +35,7 @@ public class Spawn : MonoBehaviour
         spawnEnd = false;
         
         //f=리스폰 파일 읽기
-        TextAsset textFile = Resources.Load("Stage 1") as TextAsset;
+        TextAsset textFile = Resources.Load(fileName) as TextAsset;
         StringReader stringReader = new(textFile.text);
 
         while (stringReader != null)

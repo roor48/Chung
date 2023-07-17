@@ -167,7 +167,7 @@ Transform:
   - {fileID: 342776251813873791}
   - {fileID: 6750144841521748674}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
 --- !u!54 &2868633164060121230
 Rigidbody:
@@ -283,6 +283,7 @@ MonoBehaviour:
   bulletName: Bullet_Leaf
   bulletSpd: 10
   delay: 3
+  burstValue: 5
 --- !u!1 &5211401026879398127
 GameObject:
   m_ObjectHideFlags: 0

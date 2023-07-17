@@ -4,12 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Bullet
   - Enemy
   - Boss
   - PoolManager
   - Item
   - Weapon
+  - Bullet
   layers:
   - Default
   - TransparentFX

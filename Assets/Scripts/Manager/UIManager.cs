@@ -50,7 +50,7 @@ public class UIManager : MonoBehaviour
         panelScore.text = $"점수 : {GameManager.Instance.Score:#,##0}";
         panelTime.text = $"걸린 시간 : {time / 60:D2}분 {time % 60:D2}초";
 
-        burstSlider.value = player.curBurstDelay / player.burstDelay;
+        burstSlider.value = 1 - player.curBurstGauge / player.burstGauge;
         expSlider.value = (float)player.exp / player.nextExp;
     }
 

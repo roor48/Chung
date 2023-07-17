@@ -40,8 +40,8 @@ public class PlayerMove : MonoBehaviour
 
     [Header("Burst")]
     public Animator burstObj;
-    public float burstDelay;
-    public float curBurstDelay;
+    public float burstGauge;
+    public float curBurstGauge;
 
     [Header("Pet")]
     public CreatePet createPet;
@@ -72,7 +72,6 @@ public class PlayerMove : MonoBehaviour
         else
             Time.timeScale = uiManager.pausePanel.activeSelf ? 0 : 1;
         LimitMove();
-        Burst();
         Shoot();
 
     }
@@ -103,7 +102,7 @@ public class PlayerMove : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.F6))
         {
-            curBurstDelay = 0;
+            curBurstGauge = burstGauge;
             uiManager.SetBurstSlider(0f);
         }
         else if (Input.GetKeyDown(KeyCode.F7))
@@ -247,19 +246,12 @@ public class PlayerMove : MonoBehaviour
     #endregion
 
     #region Burst
-    private void Burst()
-    {
-        if (curBurstDelay > 0)
-        {
-            curBurstDelay -= Time.deltaTime;
-        }
-    }
     private readonly int doBurst = Animator.StringToHash("doBurst");
-    public void OnBurst()
+    public void OnBurst()   
     {
-        if (curBurstDelay > 0 || GameManager.Instance.isCleared)
+        if (curBurstGauge < burstGauge || GameManager.Instance.isCleared)
             return;
-        curBurstDelay = burstDelay;
+        curBurstGauge = 0;
         burstObj.SetTrigger(doBurst);
     }
     #endregion

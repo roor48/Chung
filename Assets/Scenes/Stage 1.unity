@@ -8708,6 +8708,9 @@ MonoBehaviour:
   - name: Item_Pet
     size: 2
     obj: {fileID: 2130194271907514656, guid: 0a85cf042c7a7ea41a2c63e450140af2, type: 3}
+  - name: BurstBead
+    size: 10
+    obj: {fileID: 7318697166856949664, guid: 2e79f6e2c72be4e46a557f22d42ac2f3, type: 3}
 --- !u!1 &1425273199
 GameObject:
   m_ObjectHideFlags: 0
@@ -10425,8 +10428,8 @@ MonoBehaviour:
   shootDelay: 0.5
   curPower: 0
   burstObj: {fileID: 522692142}
-  burstDelay: 3
-  curBurstDelay: 0
+  burstGauge: 60
+  curBurstGauge: 0
   createPet: {fileID: 1888435935}
 --- !u!135 &1640144741
 SphereCollider:
@@ -11335,6 +11338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a06c5e7913db64c4899ff371d4bafa7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fileName: Stage 1
   bossObject: {fileID: 1040814520}
   spawnDelay: 5
   spawnIndex: 0

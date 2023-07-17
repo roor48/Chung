@@ -216,6 +216,7 @@ MonoBehaviour:
   bulletName: Bullet_Normal
   bulletSpd: 8
   delay: 2
+  burstValue: 3
 --- !u!1 &1480238691716607054
 GameObject:
   m_ObjectHideFlags: 0

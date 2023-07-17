@@ -26,6 +26,8 @@ public class TakeDamage : MonoBehaviour
         if (other.CompareTag("Bullet") && !isDead && !noDamage)
         {
             Bullet bulletScript = other.GetComponent<Bullet>();
+            if (bulletScript == null)
+                return;
             GetDamage(bulletScript.dmg);
             if (bulletScript.curThroughCnt-- <= 0)
                 other.gameObject.SetActive(false);
@@ -43,7 +45,7 @@ public class TakeDamage : MonoBehaviour
             {
                 GameManager.Instance.Score += maxHealth;
                 PlayerMove.Instance.SetLevel(xp);
-                
+
                 if (gameObject.CompareTag("Enemy"))
                     CreateItem();
                 else if (gameObject.CompareTag("Boss"))
