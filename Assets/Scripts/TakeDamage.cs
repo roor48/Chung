@@ -113,6 +113,9 @@ public class TakeDamage : MonoBehaviour
             case < 30:
                 itemName = "Weapon_Torus";
                 break;
+            case < 35:
+                itemName = "Item_Barrier";
+                break;
             default:
                 return;
         } 

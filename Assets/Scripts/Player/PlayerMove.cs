@@ -44,6 +44,7 @@ public class PlayerMove : MonoBehaviour
     public Animator burstObj;
     public float burstGauge;
     public float curBurstGauge;
+    public GameObject barrier;
 
     [Header("Pet")]
     public CreatePet createPet;
@@ -315,6 +316,22 @@ public class PlayerMove : MonoBehaviour
     }
     #endregion
 
+    #region Barrier
+    public void DoBarrier()
+    {
+        barrier.SetActive(true);
+        takeDamage.noDamage = true;
+        
+        CancelInvoke(nameof(StopBarrier));
+        Invoke(nameof(StopBarrier), 9f);
+    }
+    private void StopBarrier()
+    {
+        takeDamage.noDamage = false;
+        barrier.SetActive(false);
+    }
+    #endregion
+    
     public void OnDie()
     {
         uiManager.OnDie();

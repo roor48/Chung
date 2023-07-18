@@ -8,6 +8,7 @@ public class Item : MonoBehaviour
         Coin,
         Speed,
         Pet,
+        Barrier,
     }
     public ItemName itemName;
     public float speed;
@@ -44,6 +45,9 @@ public class Item : MonoBehaviour
                 PlayerMove.Instance.createPet.MakePet();
                 break;
             
+            case ItemName.Barrier:
+                PlayerMove.Instance.DoBarrier();
+                break;
             default:
                 throw new ArgumentOutOfRangeException();
         }

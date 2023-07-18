@@ -5,31 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e34de0e-f3dd-4c4e-b133-97dea5675b16" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Chung/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Chung/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animator/Burrow.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animator/Burrow.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemies/Enemy_Burrow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemies/Enemy_Burrow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemies/Enemy_Cactus.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemies/Enemy_Cactus.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemies/Enemy_Fiery.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemies/Enemy_Fiery.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemies/Enemy_MeltalHelmet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemies/Enemy_MeltalHelmet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemies/Enemy_Normal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemies/Enemy_Normal.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemies/Enemy_Rabbit.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemies/Enemy_Rabbit.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Bullets/Bullet_Player_Cube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Bullets/Bullet_Player_Cube.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Stage 2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Stage 2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Stage 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Stage 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Stage 2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Stage 2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Boss/BossTurtle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Boss/BossTurtle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Shoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Shoot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Item/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Item/Weapon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/PoolManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/PoolManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Burst.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Burst.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Item/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Item/Item.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMove.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/TakeDamage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TakeDamage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/totoList.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/totoList.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/발표용 한글.hwp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tree 1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tree 1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tree.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tree.prefab.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,6 +128,7 @@
       <workItem from="1689579384970" duration="4327000" />
       <workItem from="1689667218967" duration="3205000" />
       <workItem from="1689684168519" duration="12520000" />
+      <workItem from="1689708768025" duration="1577000" />
     </task>
     <servers />
   </component>
@@ -161,13 +145,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Item/Item.cs</url>
-          <line>19</line>
+          <line>20</line>
           <properties documentPath="C:\GitHub\Unity\Chung\Assets\Scripts\Item\Item.cs" initialLine="19" containingFunctionPresentation="메서드 'Awake'">
             <startOffsets>
-              <option value="316" />
+              <option value="333" />
             </startOffsets>
             <endOffsets>
-              <option value="317" />
+              <option value="334" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
