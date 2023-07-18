@@ -372,6 +372,8 @@ MonoBehaviour:
   health: 30
   xp: 4
   noDamage: 0
+  disableOnDie: 0
+  isTurtle: 0
 --- !u!114 &978098425221821209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -389,6 +391,7 @@ MonoBehaviour:
   speed: 4
   bulletSpd: 10
   delay: 5
+  burstBeadPos: 6
   burstValue: 3.5
 --- !u!1 &7352479863175366241
 GameObject:

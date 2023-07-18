@@ -986,11 +986,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 403f7186916c07849994951e1681c83a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 40
+  maxHealth: 57
   health: 0
   xp: 5
   noDamage: 0
   disableOnDie: 1
+  isTurtle: 0
 --- !u!114 &996401269669206870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1005,9 +1006,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyList: 4
   bulletName: Bullet_Rock
-  speed: 4
+  speed: 3.5
   bulletSpd: 7
   delay: 3
+  burstBeadPos: 0
   burstValue: 4
 --- !u!1 &7615353099417763452
 GameObject:

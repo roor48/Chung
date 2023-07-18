@@ -30,6 +30,8 @@ public class Pet : MonoBehaviour
         
         if (targetPos.Count > followDelay)
             followPos = targetPos.Dequeue();
+        else if (targetPos.Count < followDelay)
+            followPos = Vector3.down * 10;
 
         transform.position = followPos;
     }

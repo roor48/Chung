@@ -12,7 +12,7 @@ public class TakeDamage : MonoBehaviour
     private Rigidbody rigid;
     private Animator anim;
     private AudioSource audioSource;
-    private bool isDead;
+    public bool isDead;
 
     private void Awake()
     {
@@ -64,7 +64,7 @@ public class TakeDamage : MonoBehaviour
             rigid.velocity = Vector3.zero;
             if (disableOnDie)
             {
-                gameObject.SetActive(false);
+                SetInActive();
                 return;
             }
             if (!gameObject.CompareTag("Player")) // 플레이어가 아니면 점수 추가 및 경험치 획득
@@ -77,7 +77,7 @@ public class TakeDamage : MonoBehaviour
                 else if (gameObject.CompareTag("Boss"))
                 {
                     Debug.Log("Boss Dead!");
-                    PoolManager.Instance.DamageEnemy(true);
+                    PoolManager.Instance.DisAbleEnemy(true);
                 }
             }
             else
@@ -101,14 +101,17 @@ public class TakeDamage : MonoBehaviour
             case < 10:
                 itemName = "Item_Speed";
                 break;
-            case < 17:
+            case < 15:
                 itemName = "Item_Pet";
                 break;
-            case < 22:
+            case < 20:
                 itemName = "Weapon_Cube";
                 break;
-            case < 27:
+            case < 25:
                 itemName = "Weapon_Sphere";
+                break;
+            case < 30:
+                itemName = "Weapon_Torus";
                 break;
             default:
                 return;
@@ -120,6 +123,7 @@ public class TakeDamage : MonoBehaviour
     // 애니메이션에서 호출
     private void SetInActive()
     {
+        transform.position += Vector3.right * 100;
         gameObject.SetActive(false);
     }
 }

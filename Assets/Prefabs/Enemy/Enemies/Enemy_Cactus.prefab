@@ -187,11 +187,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 403f7186916c07849994951e1681c83a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 30
+  maxHealth: 45
   health: 0
   xp: 4
   noDamage: 0
   disableOnDie: 0
+  isTurtle: 0
 --- !u!114 &547661613589723698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,9 +207,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyList: 3
   bulletName: Bullet_Cactus
-  speed: 4
+  speed: 3.5
   bulletSpd: 7
-  delay: 6
+  delay: 4
+  burstBeadPos: 0
   burstValue: 3.5
 --- !u!1 &1818131163193051527
 GameObject:

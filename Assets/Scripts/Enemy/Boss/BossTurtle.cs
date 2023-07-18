@@ -45,27 +45,27 @@ public class BossTurtle : MonoBehaviour
     public int patternID = 0;
     private IEnumerator Think()
     {
+        if (takeDamage.isDead)
+            yield break;
         switch (patternID++)
         {
             case 2:
-                Debug.Log("2!");
                 Shield();
-                while (anim.GetBool(defend))
+                while (anim.GetBool(defend) && !takeDamage.isDead)
                     yield return null;
 
                 Dizzy();
-                while (anim.GetBool(dizzy))
+                while (anim.GetBool(dizzy) && !takeDamage.isDead)
                     yield return null;
                 break;
             
             case 1:
-                Debug.Log("1!");
                 GameObject bullet = PoolManager.Instance.GetPool("Bullet_Cone");
                 Rigidbody bulletRigid = bullet.GetComponent<Rigidbody>();
                 bulletRigid.velocity = Vector3.zero;
                 bullet.transform.position = transform.position + Vector3.left * 3;
                 Vector3 dirVec = default;
-                for (int i = 0; i < 150; i++)
+                for (int i = 0; i < 150 && !takeDamage.isDead; i++)
                 {
                     dirVec = playerTrans.position - bullet.transform.position;
                     dirVec.y = 0;
@@ -78,9 +78,7 @@ public class BossTurtle : MonoBehaviour
                 bullet.GetComponent<Rigidbody>().velocity = dirVec.normalized * 20;
                 break;
             case 0:
-                Debug.Log("0!");
-                
-                for (int i = 0; i < 64; i++)
+                for (int i = 0; i < 64 && !takeDamage.isDead; i++)
                 {
                     bullet = PoolManager.Instance.GetPool("Bullet_Cone");
                     bulletRigid = bullet.GetComponent<Rigidbody>();

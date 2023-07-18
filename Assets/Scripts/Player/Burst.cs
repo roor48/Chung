@@ -6,6 +6,6 @@ public class Burst : MonoBehaviour
 {
     private void OnBurst()
     {
-        PoolManager.Instance.DamageEnemy(false);
+        PoolManager.Instance.DisAbleEnemy(false);
     }
 }

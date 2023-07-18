@@ -1,7 +1,7 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class PlayerMove : MonoBehaviour
@@ -56,6 +56,8 @@ public class PlayerMove : MonoBehaviour
         takeDamage = GetComponent<TakeDamage>();
 
         Instance = this;
+        
+        // 이전 스테이지 스탯 불러오기
         speed = stdSpeed;
         bulletName = "Bullet_Player_Sphere";
         takeDamage.maxHealth = PlayerStats.Instance.maxHealth;
@@ -67,7 +69,7 @@ public class PlayerMove : MonoBehaviour
         atkBonus = PlayerStats.Instance.atkBonus;
         curBurstGauge = PlayerStats.Instance.curBurstGauge;
 
-        int pets = PlayerStats.Instance.petCnt;
+        int pets = PlayerStats.Instance.petCnt; // 값이 바뀌기 때문에 변수로 저장
         for (int i = 0; i < pets; i++)
             createPet.MakePet();
     }
@@ -103,7 +105,7 @@ public class PlayerMove : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.F3))
         {
-            LevelUp(-1);
+            LevelDown(1);
         }
         else if (Input.GetKeyDown(KeyCode.F4))
         {
@@ -111,7 +113,7 @@ public class PlayerMove : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.F5))
         {
-            string[] itemNames = { "Weapon_Cube", "Weapon_Sphere" };
+            string[] itemNames = { "Weapon_Cube", "Weapon_Sphere", "Weapon_Torus" };
             PoolManager.Instance.GetPool(itemNames[Random.Range(0, itemNames.Length)]).transform.position = new Vector3(7, 1.5f, 0f);
         }
         else if (Input.GetKeyDown(KeyCode.F6))
@@ -278,8 +280,6 @@ public class PlayerMove : MonoBehaviour
         if (exp >= nextExp)
         {
             LevelUp(exp/nextExp);
-            exp %= nextExp;
-            nextExp *= 2;
         }
 
     }
@@ -287,15 +287,31 @@ public class PlayerMove : MonoBehaviour
     private readonly int levelUp = Animator.StringToHash("LevelUp");
     private void LevelUp(int val)
     {
-        level += val;       // 레벨 업 시 스탯 상승
         uiManager.levelUpAnim.SetTrigger(levelUp);
-        takeDamage.maxHealth += 20;
+        uiManager.levelUpAnim.GetComponent<Text>().text = "레벨 업!";
+        
+        level += val;       // 레벨 업 시 스탯 상승
+        exp %= nextExp;
+        nextExp = (int)(nextExp * 1.3f*val);
+        takeDamage.maxHealth += 20*val;
         takeDamage.health += takeDamage.maxHealth / 3;
         if (takeDamage.health > takeDamage.maxHealth)
             takeDamage.health = takeDamage.maxHealth;
-        atkBonus += 1;
+        atkBonus+=2*val;
+    }
 
+    private void LevelDown(int val)
+    {
+        uiManager.levelUpAnim.SetTrigger(levelUp);
+        uiManager.levelUpAnim.GetComponent<Text>().text = "레벨 다운...";
 
+        level -= val;       // 스탯 다운
+        nextExp = (int)(nextExp/(1.3f*val));
+        takeDamage.maxHealth -= 20*val;
+        takeDamage.health -= 20;
+        if (takeDamage.health <= 0)
+            takeDamage.health = 1;
+        atkBonus-=2*val;
     }
     #endregion
 

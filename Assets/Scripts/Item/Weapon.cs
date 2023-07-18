@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour
@@ -6,9 +7,10 @@ public class Weapon : MonoBehaviour
     {
         Cube,
         Sphere,
+        Torus,
     }
     public Type type;
-
+    
     public float speed;
     private Rigidbody rigid;
 
@@ -21,6 +23,8 @@ public class Weapon : MonoBehaviour
     {
         rigid.velocity = Vector3.left * speed;
     }
+
+
 
     private void OnTriggerEnter(Collider other)
     {

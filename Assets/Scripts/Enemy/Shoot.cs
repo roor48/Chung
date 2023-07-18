@@ -22,6 +22,7 @@ public class Shoot : MonoBehaviour
     public float delay;
     private float curDelay;
 
+    public float burstBeadPos;
     public float burstValue;
 
     private Animator anim;
@@ -60,7 +61,7 @@ public class Shoot : MonoBehaviour
             SoundManager.Instance.dieSound.Play();
         GameObject bead = PoolManager.Instance.GetPool("BurstBead");
         bead.GetComponent<BurstGauge>().burstValue = this.burstValue;
-        bead.transform.position = transform.position + Vector3.right * 6.5f;
+        bead.transform.position = transform.position + Vector3.right * burstBeadPos - Vector3.right * 100;
     }
 
     private void Update()
