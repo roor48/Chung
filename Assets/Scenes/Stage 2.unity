@@ -5554,7 +5554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 200
   level: 5
-  weaponName: Bullet_Player_Torus
+  weaponName: Bullet_Player_Cube
   power: 2
   nextExp: 55
   exp: 0
@@ -11685,7 +11685,7 @@ MonoBehaviour:
     obj: {fileID: 7649532129299748844, guid: 509906a3a07871b4b8d1bdfb8ecdf8f5, type: 3}
   - name: Bullet_Cactus
     size: 10
-    obj: {fileID: 5782810485920491966, guid: 91c799882b339714285ce0aed9d9a58f, type: 3}
+    obj: {fileID: 7494990104618582704, guid: e4c655e7b20e53e4b8ac0ff4629aa1b9, type: 3}
   - name: Bullet_Rock
     size: 10
     obj: {fileID: 5693628844109171058, guid: 3f3a17416d336254989ea60746593f15, type: 3}

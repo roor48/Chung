@@ -148,7 +148,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletType: 0
+  detectZone: {fileID: 0}
+  rigid: {fileID: 0}
   throughCnt: 0
   curThroughCnt: 0
-  stdDmg: 2
+  stdDmg: 4
   dmg: 0
