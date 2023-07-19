@@ -9,6 +9,9 @@ public class MainScene : MonoBehaviour
     public Animator controlsPanel;
     public Animator explainPanel;
 
+    public GameObject weaponsPanel;
+    public GameObject itemsPanel;
+
     private void Awake()
     {
         Time.timeScale = 1f;
@@ -67,11 +70,22 @@ public class MainScene : MonoBehaviour
         HideMain();
         explainPanel.SetTrigger(showPanel);
     }
-
     public void HideExplainBtn()
     {
         ShowMain();
         explainPanel.SetTrigger(hidePanel);
     }
-    
+    public void WeaponBtn()
+    {
+        weaponsPanel.SetActive(true);
+    }
+    public void ItemBtn()
+    {
+        itemsPanel.SetActive(true);
+    }
+    public void HideBtn()
+    {
+        weaponsPanel.SetActive(false);
+        itemsPanel.SetActive(false);
+    }
 }
