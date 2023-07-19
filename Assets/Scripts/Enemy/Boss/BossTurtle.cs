@@ -22,7 +22,7 @@ public class BossTurtle : MonoBehaviour
         anim = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
         
-        playerTrans = PlayerMove.Instance.transform;
+        playerTrans = Player.Instance.transform;
     }
 
     private void OnEnable()

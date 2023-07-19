@@ -4,9 +4,9 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
-public class PlayerMove : MonoBehaviour
+public class Player : MonoBehaviour
 {
-    public static PlayerMove Instance { get; private set; }
+    public static Player Instance { get; private set; }
     
     private Rigidbody rigid;
     private Animator anim;

@@ -40,21 +40,21 @@ public class Item : MonoBehaviour
                 break;
             
             case ItemName.Speed:
-                PlayerMove.Instance.SetSpeed();
+                Player.Instance.SetSpeed();
                 break;
 
             case ItemName.Pet:
-                PlayerMove.Instance.createPet.MakePet();
+                Player.Instance.createPet.MakePet();
                 break;
             
             case ItemName.Barrier:
-                PlayerMove.Instance.DoBarrier();
+                Player.Instance.DoBarrier();
                 break;
             case ItemName.HealLow:
-                PlayerMove.Instance.HealLow();
+                Player.Instance.HealLow();
                 break;
             case ItemName.HealFull:
-                PlayerMove.Instance.HealFull();
+                Player.Instance.HealFull();
                 break;
             default:
                 throw new ArgumentOutOfRangeException();

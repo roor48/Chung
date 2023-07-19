@@ -55,15 +55,15 @@ public class UIManager : MonoBehaviour
         int time = (int)GameManager.Instance.Timer;
         timeText.text = $"{time / 60:D2} : {time % 60:D2}";
         scoreText.text = $"{GameManager.Instance.Score:#,##0}점";
-        levelText.text = $"현재 레벨 : {PlayerMove.Instance.level}";
+        levelText.text = $"현재 레벨 : {Player.Instance.level}";
 
         panelScore.text = $"점수 : {GameManager.Instance.Score:#,##0}";
         panelTime.text = $"걸린 시간 : {time / 60:D2}분 {time % 60:D2}초";
         clearGivenDmg.text = $"가한 피해량 : {GameManager.Instance.GivenDmg:#,##0}";
         clearTakenDmg.text = $"받은 피해량 : {GameManager.Instance.TakenDmg:#,##0}";
 
-        burstSlider.value = 1 - PlayerMove.Instance.curBurstGauge / PlayerMove.Instance.burstGauge;
-        expSlider.value = (float)PlayerMove.Instance.exp / PlayerMove.Instance.nextExp;
+        burstSlider.value = 1 - Player.Instance.curBurstGauge / Player.Instance.burstGauge;
+        expSlider.value = (float)Player.Instance.exp / Player.Instance.nextExp;
     }
 
     public void SetBurstSlider(float value)
@@ -79,13 +79,13 @@ public class UIManager : MonoBehaviour
         gameOverTimeText.text = $"살아남은 시간 : {time / 60:D2}분 {time % 60:D2}초";
         givenDmgText.text = $"가한 데미지 : {GameManager.Instance.GivenDmg:#,##0}";
         takenDmgText.text = $"받은 데미지 : {GameManager.Instance.TakenDmg:#,##0}";
-        gameOverLevelText.text = $"현재 레벨 : {PlayerMove.Instance.level}Lv.";
+        gameOverLevelText.text = $"현재 레벨 : {Player.Instance.level}Lv.";
     }
 
     public void ShowCheatPanel()
     {
         cheatPanel.SetActive(!cheatPanel.activeSelf);
-        cPText.text = $"현재 경험치 : {PlayerMove.Instance.exp}\n\n현재 레벨 : {PlayerMove.Instance.level}\n\n레벨 업까지 필요한 경험치 : {(PlayerMove.Instance.nextExp - PlayerMove.Instance.exp < 0 ? 0 : PlayerMove.Instance.nextExp - PlayerMove.Instance.exp)}";
+        cPText.text = $"현재 경험치 : {Player.Instance.exp}\n\n현재 레벨 : {Player.Instance.level}\n\n레벨 업까지 필요한 경험치 : {(Player.Instance.nextExp - Player.Instance.exp < 0 ? 0 : Player.Instance.nextExp - Player.Instance.exp)}";
         CancelInvoke(nameof(HideCheatPanel));
         if (cheatPanel.activeSelf)
             Invoke(nameof(HideCheatPanel), 5f);
@@ -118,15 +118,15 @@ public class UIManager : MonoBehaviour
 
     public void GoNextScene(string sceneName)
     {
-        PlayerStats.Instance.nextExp = PlayerMove.Instance.nextExp;
-        PlayerStats.Instance.level = PlayerMove.Instance.level;
-        PlayerStats.Instance.atkBonus = PlayerMove.Instance.atkBonus;
-        PlayerStats.Instance.maxHealth = PlayerMove.Instance.takeDamage.maxHealth;
-        PlayerStats.Instance.weaponName = PlayerMove.Instance.bulletName;
-        PlayerStats.Instance.power = PlayerMove.Instance.curPower;
-        PlayerStats.Instance.curBurstGauge = PlayerMove.Instance.curBurstGauge;
-        PlayerStats.Instance.exp = PlayerMove.Instance.exp;
-        PlayerStats.Instance.petCnt = PlayerMove.Instance.createPet.petIndex;
+        PlayerStats.Instance.nextExp = Player.Instance.nextExp;
+        PlayerStats.Instance.level = Player.Instance.level;
+        PlayerStats.Instance.atkBonus = Player.Instance.atkBonus;
+        PlayerStats.Instance.maxHealth = Player.Instance.takeDamage.maxHealth;
+        PlayerStats.Instance.weaponName = Player.Instance.bulletName;
+        PlayerStats.Instance.power = Player.Instance.curPower;
+        PlayerStats.Instance.curBurstGauge = Player.Instance.curBurstGauge;
+        PlayerStats.Instance.exp = Player.Instance.exp;
+        PlayerStats.Instance.petCnt = Player.Instance.createPet.petIndex;
 
 
         SceneManager.LoadScene(sceneName);

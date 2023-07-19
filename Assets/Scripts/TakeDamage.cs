@@ -70,7 +70,7 @@ public class TakeDamage : MonoBehaviour
             if (!gameObject.CompareTag("Player")) // 플레이어가 아니면 점수 추가 및 경험치 획득
             {
                 GameManager.Instance.Score += maxHealth;
-                PlayerMove.Instance.SetLevel(xp);
+                Player.Instance.SetLevel(xp);
 
                 if (gameObject.CompareTag("Enemy"))
                     CreateItem();
@@ -82,7 +82,7 @@ public class TakeDamage : MonoBehaviour
             }
             else
             {
-                gameObject.GetComponent<PlayerMove>().OnDie();
+                gameObject.GetComponent<Player>().OnDie();
             }
             
             if (anim == null)

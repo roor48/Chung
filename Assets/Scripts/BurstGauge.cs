@@ -13,7 +13,7 @@ public class BurstGauge : MonoBehaviour
     private void OnEnable()
     {
         rigid = GetComponent<Rigidbody>();
-        playerTrans = PlayerMove.Instance.transform;
+        playerTrans = Player.Instance.transform;
         rigid.velocity = Vector3.zero;
         speed = 1;
     }
@@ -33,6 +33,6 @@ public class BurstGauge : MonoBehaviour
             return;
 
         gameObject.SetActive(false);
-        PlayerMove.Instance.curBurstGauge += burstValue;
+        Player.Instance.curBurstGauge += burstValue;
     }
 }

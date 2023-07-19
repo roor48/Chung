@@ -41,7 +41,7 @@ public class Shoot : MonoBehaviour
     
     private void Start()
     {
-        playerTrans = PlayerMove.Instance.transform;
+        playerTrans = Player.Instance.transform;
     }
 
     private void OnEnable()

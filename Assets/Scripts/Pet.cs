@@ -17,7 +17,7 @@ public class Pet : MonoBehaviour
 
     public void Update()
     {
-        if (GameManager.Instance.isCleared || PlayerMove.Instance.isDead)
+        if (GameManager.Instance.isCleared || Player.Instance.isDead)
             return;
         Follow();
         Shoot();
@@ -45,7 +45,7 @@ public class Pet : MonoBehaviour
         }
         curDelay = 2;
 
-        GameObject bullet = PoolManager.Instance.GetPool(PlayerMove.Instance.GetBulletName);
+        GameObject bullet = PoolManager.Instance.GetPool(Player.Instance.GetBulletName);
         Rigidbody bulletRigid = bullet.GetComponent<Rigidbody>();
         Bullet bulletScript = bullet.GetComponent<Bullet>();
 
@@ -55,6 +55,6 @@ public class Pet : MonoBehaviour
         bulletRigid.velocity = Vector3.zero;
         bulletScript.dmg = bulletScript.stdDmg / 2;
 
-        bulletRigid.AddForce(PlayerMove.Instance.bulletSpd * Vector3.right, ForceMode.Impulse);
+        bulletRigid.AddForce(Player.Instance.bulletSpd * Vector3.right, ForceMode.Impulse);
     }
 }

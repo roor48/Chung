@@ -32,6 +32,6 @@ public class Weapon : MonoBehaviour
             return;
         
         gameObject.SetActive(false);
-        PlayerMove.Instance.ChangeWeapon("Bullet_Player_" + type);
+        Player.Instance.ChangeWeapon("Bullet_Player_" + type);
     }
 }

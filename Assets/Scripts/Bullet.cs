@@ -37,10 +37,10 @@ public class Bullet : MonoBehaviour
         if (bulletType != BulletType.Enemy)
         {
             if (bulletType == BulletType.Cube)
-                throughCnt = PlayerMove.Instance.curPower == 2 ? 2 : 1;
-            int meshIdx = PlayerMove.Instance.level;
+                throughCnt = Player.Instance.curPower == 2 ? 2 : 1;
+            int meshIdx = Player.Instance.level;
             meshIdx = (meshIdx-1)/2 >= 2 ? 2 : meshIdx/2;
-            meshRend.material = PlayerMove.Instance.bulletMat[meshIdx];
+            meshRend.material = Player.Instance.bulletMat[meshIdx];
         }
     }
 
