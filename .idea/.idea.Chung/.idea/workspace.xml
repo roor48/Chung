@@ -8,11 +8,6 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Stage 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Stage 1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Item/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Item/Item.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMove.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TakeDamage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TakeDamage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tree 1.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tree 1.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tree.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tree.prefab.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,6 +124,7 @@
       <workItem from="1689667218967" duration="3205000" />
       <workItem from="1689684168519" duration="12520000" />
       <workItem from="1689708768025" duration="1577000" />
+      <workItem from="1689740005285" duration="425000" />
     </task>
     <servers />
   </component>
@@ -139,25 +135,6 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Item/Item.cs</url>
-          <line>20</line>
-          <properties documentPath="C:\GitHub\Unity\Chung\Assets\Scripts\Item\Item.cs" initialLine="19" containingFunctionPresentation="메서드 'Awake'">
-            <startOffsets>
-              <option value="333" />
-            </startOffsets>
-            <endOffsets>
-              <option value="334" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

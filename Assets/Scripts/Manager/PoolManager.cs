@@ -46,7 +46,7 @@ public class PoolManager : MonoBehaviour
         return select;
     }
 
-    public void DisAbleEnemy(bool doDmgOnly) // 적들이나 총알들을 비활성화 하는 메소드
+    public void DisAbleEnemy(bool doDisableOnly) // 적들이나 총알들을 비활성화 하는 메소드
     {
         foreach (Pool pool in pools)
         {
@@ -56,7 +56,7 @@ public class PoolManager : MonoBehaviour
                 {
                     if (!objDict[pool.name][j].activeSelf) continue;
 
-                    if (doDmgOnly || pool.obj.CompareTag("Bullet"))
+                    if (doDisableOnly || pool.obj.CompareTag("Bullet"))
                         objDict[pool.name][j].SetActive(false);
                     else
                         objDict[pool.name][j].GetComponent<TakeDamage>().GetDamage(100);

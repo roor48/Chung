@@ -18,7 +18,7 @@ public class DetectZone : MonoBehaviour
         float nearest = 999f;
         foreach (Transform detect in detected)
         {
-            if (Vector3.Distance(transform.position, detect.position) < nearest)
+            if (!detect.GetComponent<TakeDamage>().isDead && Vector3.Distance(transform.position, detect.position) < nearest)
             {
                 nearest = Vector3.Distance(transform.position, detect.position);
                 near = detect;

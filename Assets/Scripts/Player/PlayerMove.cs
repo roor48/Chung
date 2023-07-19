@@ -331,6 +331,17 @@ public class PlayerMove : MonoBehaviour
         barrier.SetActive(false);
     }
     #endregion
+
+    public void HealLow()
+    {
+        takeDamage.health += takeDamage.maxHealth / 5;
+        if (takeDamage.health > takeDamage.maxHealth)
+            takeDamage.health = takeDamage.maxHealth;
+    }
+    public void HealFull()
+    {
+        takeDamage.health = takeDamage.maxHealth;
+    }
     
     public void OnDie()
     {

@@ -9,6 +9,8 @@ public class Item : MonoBehaviour
         Speed,
         Pet,
         Barrier,
+        HealLow,
+        HealFull,
     }
     public ItemName itemName;
     public float speed;
@@ -47,6 +49,12 @@ public class Item : MonoBehaviour
             
             case ItemName.Barrier:
                 PlayerMove.Instance.DoBarrier();
+                break;
+            case ItemName.HealLow:
+                PlayerMove.Instance.HealLow();
+                break;
+            case ItemName.HealFull:
+                PlayerMove.Instance.HealFull();
                 break;
             default:
                 throw new ArgumentOutOfRangeException();

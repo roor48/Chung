@@ -46,10 +46,8 @@ public class Bullet : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (GameManager.Instance.MainCam.WorldToViewportPoint(transform.position).x > 1.5f ||
-            GameManager.Instance.MainCam.WorldToViewportPoint(transform.position).x < -0.5f ||
-            GameManager.Instance.MainCam.WorldToViewportPoint(transform.position).y > 1.5f ||
-            GameManager.Instance.MainCam.WorldToViewportPoint(transform.position).y < -0.5f)
+        Vector3 viewPos = GameManager.Instance.MainCam.WorldToViewportPoint(transform.position);
+        if (viewPos.x > 1.2f || viewPos.x < -0.2f || viewPos.y > 1.2f || viewPos.y < -0.2f)
         {
             gameObject.SetActive(false);
         }
@@ -65,7 +63,7 @@ public class Bullet : MonoBehaviour
         }
         else
         {
-            rigid.velocity = Vector3.right * 10;
+            rigid.velocity = Vector3.right * 7;
         }
     }
 }

@@ -98,27 +98,34 @@ public class TakeDamage : MonoBehaviour
         string itemName;
         switch (ranItem)
         {
-            case < 10:
+            case < 6:
                 itemName = "Item_Speed";
                 break;
-            case < 15:
+            case < 10:
                 itemName = "Item_Pet";
                 break;
-            case < 20:
+            case < 15:
                 itemName = "Weapon_Cube";
                 break;
-            case < 25:
+            case < 20:
                 itemName = "Weapon_Sphere";
                 break;
-            case < 30:
+            case < 24:
                 itemName = "Weapon_Torus";
                 break;
-            case < 35:
+            case < 29:
                 itemName = "Item_Barrier";
                 break;
+            case < 31:
+                itemName = "Item_HealFull";
+                break;
+            case < 35:
+                itemName = "Item_HealLow";
+                break;
+
             default:
                 return;
-        } 
+        }
 
         PoolManager.Instance.GetPool(itemName).transform.position = transform.position;
     }

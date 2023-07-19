@@ -11706,19 +11706,28 @@ MonoBehaviour:
     obj: {fileID: 3224528075828749783, guid: f07486c786475254fbc00133dd828e2a, type: 3}
   - name: Weapon_Cube
     size: 2
-    obj: {fileID: 7638057693114803141, guid: c58984fe2d68fcb4f99fec580d811b13, type: 3}
+    obj: {fileID: 6499458846796417251, guid: c58984fe2d68fcb4f99fec580d811b13, type: 3}
   - name: Weapon_Sphere
     size: 2
-    obj: {fileID: 2600154237329426875, guid: 5bd3e164a53af4947a9fb69678b05875, type: 3}
+    obj: {fileID: 7247407498871413478, guid: 5bd3e164a53af4947a9fb69678b05875, type: 3}
   - name: Weapon_Torus
     size: 2
-    obj: {fileID: 2125546878661565159, guid: a3685ff690c908c4caf6f1acf5d6af1f, type: 3}
+    obj: {fileID: 6027617852703016892, guid: a3685ff690c908c4caf6f1acf5d6af1f, type: 3}
   - name: Item_Speed
     size: 2
-    obj: {fileID: 1107303317011812027, guid: 4ad155b898f611f45bdabbd9f9e993d0, type: 3}
+    obj: {fileID: 7460144283343102580, guid: 659a0bae042988b4dbbf2029cea7fd40, type: 3}
   - name: Item_Pet
     size: 2
-    obj: {fileID: 2130194271907514656, guid: 0a85cf042c7a7ea41a2c63e450140af2, type: 3}
+    obj: {fileID: 8715883339259285272, guid: 0a85cf042c7a7ea41a2c63e450140af2, type: 3}
+  - name: Item_HealFull
+    size: 2
+    obj: {fileID: 3051413501589256070, guid: 76da182889ba8be49a154feb792e475f, type: 3}
+  - name: Item_Barrier
+    size: 2
+    obj: {fileID: 2499420400149852969, guid: 36121418b0c6cb04f927a94d5a89580a, type: 3}
+  - name: Item_HealLow
+    size: 2
+    obj: {fileID: 8528597778196536976, guid: ef41a68de22c08f458f25166f056ec4d, type: 3}
   - name: BurstBead
     size: 10
     obj: {fileID: 7318697166856949664, guid: 2e79f6e2c72be4e46a557f22d42ac2f3, type: 3}
@@ -13555,6 +13564,89 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &1590208739
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1590208742}
+  - component: {fileID: 1590208741}
+  - component: {fileID: 1590208740}
+  m_Layer: 0
+  m_Name: Barrier
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!23 &1590208740
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590208739}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 971b1d3dbc338384092131dc65229741, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1590208741
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590208739}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1590208742
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590208739}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.8, y: 2, z: 1.8}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1640144746}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1594082508 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 406880, guid: 35d82b3ae8f9c4f42b6b11ccb42803cd, type: 3}
@@ -14312,7 +14404,10 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 48832d7c61f49d04fb7549b434551402, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4023215848608658, guid: 55776efecb0cd134ea5f418c2f97a705, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1590208742}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1919012471076396, guid: 55776efecb0cd134ea5f418c2f97a705, type: 3}
       insertIndex: -1
@@ -14431,6 +14526,7 @@ MonoBehaviour:
   burstObj: {fileID: 522692142}
   burstGauge: 60
   curBurstGauge: 0
+  barrier: {fileID: 1590208739}
   createPet: {fileID: 1888435935}
 --- !u!135 &1640144741
 SphereCollider:
