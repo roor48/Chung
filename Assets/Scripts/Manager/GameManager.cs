@@ -18,11 +18,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    // 데이터 합계
     public float sumTime;
     public int sumTakenDmg;
     public int sumGivenDmg;
     public int sumScore;
-    // public string bulletName;
+
+    // 현재 정보
     public float Timer { get; private set; }
     public int Score { get; set; }
     public int TakenDmg { get; set; }
@@ -50,11 +52,13 @@ public class GameManager : MonoBehaviour
     // 체인을 걸어서 이 함수는 매 씬마다 호출된다.
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        // 합을 구하고
         sumTime += Timer;
         sumTakenDmg += TakenDmg;
         sumGivenDmg += GivenDmg;
         sumScore += Score;
         
+        // 다음 씬으로 넘어가면 초기화한다.
         TakenDmg = 0;
         GivenDmg = 0;
         Timer = 0;
@@ -65,7 +69,7 @@ public class GameManager : MonoBehaviour
     {
         if (isCleared)
             return;
-        Timer += Time.deltaTime;
+        Timer += Time.deltaTime; // 시간 추가
     }
 
     public void SetCleared(bool _flag)

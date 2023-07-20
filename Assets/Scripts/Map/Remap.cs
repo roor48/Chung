@@ -23,11 +23,11 @@ public class Remap : MonoBehaviour
         firstPos = transform.position;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (stopReturn)
             return;
-        transform.position += Time.deltaTime * speed  * Vector3.left;
+        transform.position += Time.fixedDeltaTime * speed  * Vector3.left;
         if (transform.position.x <= -32)
         {
             switch (type)

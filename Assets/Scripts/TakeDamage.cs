@@ -40,8 +40,8 @@ public class TakeDamage : MonoBehaviour
         if (bulletScript.curThroughCnt-- <= 0)
             other.gameObject.SetActive(false);
         
-        if (isTurtle)
-            if (anim.GetBool(defend))
+        if (isTurtle) // 거북이이면서
+            if (anim.GetBool(defend)) // defend 애니메이션 중 일때
             {
                 anim.SetTrigger(defendGetHit);
                 return;
