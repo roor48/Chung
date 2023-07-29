@@ -13,6 +13,5 @@ public class CreatePet : MonoBehaviour
         }
         
         pets[petIndex++].SetActive(true);
-        PlayerStats.Instance.petCnt = petIndex;
     }
 }

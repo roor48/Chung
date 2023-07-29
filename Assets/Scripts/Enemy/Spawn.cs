@@ -65,7 +65,7 @@ public class Spawn : MonoBehaviour
 
     private void Update()
     {
-        if (spawnEnd)
+        if (spawnEnd) // txt파일이 끝났을 때
         {
             if (firstEnd)
                 spawnDelay = 4f;
@@ -85,7 +85,7 @@ public class Spawn : MonoBehaviour
         }
         curDelay = 0;
 
-        do
+        do // 실행하고
         {
             int spawnPoint = spawnList[spawnIndex].point;
 
@@ -107,7 +107,7 @@ public class Spawn : MonoBehaviour
             }
 
             spawnDelay = spawnList[spawnIndex].delay;
-        } while (spawnDelay == 0);
+        } while (spawnDelay == 0); // delay가 0초이면 바로 실행 (다음 프레임까지 대기 안함)
     }
 
     private void RandomSpawn()
